@@ -1,0 +1,18 @@
+# gpaw files
+*.gpaw
+*.gpw
+*/elph*
+
+# numpy arrays
+*.npy
+
+# large json files
+*.json
+
+# python things
+__pycache__
+.ipynb_checkpoints
+
+
+.DS_Store
+

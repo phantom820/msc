@@ -1,0 +1,3163 @@
+
+  ___ ___ ___ _ _ _  
+ |   |   |_  | | | | 
+ | | | | | . | | | | 
+ |__ |  _|___|_____|  25.1.0
+ |___|_|             
+
+User:   tshepo@Tshepos-MacBook-Pro.local
+Date:   Wed Nov 19 13:50:54 2025
+Arch:   arm64
+Pid:    80124
+CWD:    /Users/tshepo/Documents/Workspace/msc/repositories/symmetry/optimized/h-varied
+Python: 3.13.0
+gpaw:   /Users/tshepo/.asdf/installs/python/3.13.0/lib/python3.13/site-packages/gpaw
+_gpaw:  /Users/tshepo/.asdf/installs/python/3.13.0/lib/python3.13/site-packages/
+        _gpaw.cpython-313-darwin.so
+ase:    /Users/tshepo/.asdf/installs/python/3.13.0/lib/python3.13/site-packages/ase (version 3.25.0)
+numpy:  /Users/tshepo/.asdf/installs/python/3.13.0/lib/python3.13/site-packages/numpy (version 2.2.3)
+scipy:  /Users/tshepo/.asdf/installs/python/3.13.0/lib/python3.13/site-packages/scipy (version 1.15.2)
+libxc:  7.0.0
+units:  Angstrom and eV
+cores: 1
+OpenMP: False
+OMP_NUM_THREADS: 1
+
+Input parameters:
+  basis: dzp
+  convergence: {density: 0.0001}
+  h: 0.18
+  kpts: [3 3 3]
+  mode: lcao
+  symmetry: {point_group: False}
+  xc: PBE
+
+System changes: positions, numbers, cell, pbc, initial_charges, initial_magmoms 
+
+Initialize ...
+
+species:
+  Si:
+    name: Silicon
+    id: ee77bee481871cc2cb65ac61239ccafa
+    Z: 14.0
+    valence: 4
+    core: 10
+    charge: 0.0
+    file: /Users/tshepo/.gpaw/gpaw-setups-24.11.0/Si.PBE.gz
+    compensation charges: {type: gauss,
+                           rc: 0.33,
+                           lmax: 2}
+    cutoffs: {filter: 1.86,
+              core: 2.06}
+    projectors:
+      #              energy  rcut
+      - 3s(2.00)   -10.812   1.058
+      - 3p(2.00)    -4.081   1.058
+      -  s          16.399   1.058
+      -  p          23.130   1.058
+      -  d           0.000   1.058
+  
+    # LCAO basis set for Si:
+    #   Name: dzp
+    #   File: /Users/tshepo/.gpaw/gpaw-setups-24.11.0/Si.dzp.basis.gz
+    #   Number of radial functions: 5
+    #   Number of spherical harmonics: 13
+    #     l=0, rc=6.8594 Bohr: 3s-sz confined orbital
+    #     l=1, rc=9.0625 Bohr: 3p-sz confined orbital
+    #     l=0, rc=3.8906 Bohr: 3s-dz split-valence wave
+    #     l=1, rc=5.2344 Bohr: 3p-dz split-valence wave
+    #     l=2, rc=9.0625 Bohr: d-type Gaussian polarization
+    #   Number of RI-basis functions 0
+
+Reference energy: -15772.688500  # eV
+
+Spin-paired calculation
+
+Convergence criteria:
+ Maximum [total energy] change in last 3 cyles: 0.0005 eV / valence electron
+ Maximum integral of absolute [dens]ity change: 0.0001 electrons / valence electron
+ Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+ Maximum number of scf [iter]ations: 333
+ (Square brackets indicate name in SCF output, whereas a 'c' in
+ the SCF output indicates the quantity has converged.)
+
+Symmetries present (total): 1
+
+  ( 1  0  0)
+  ( 0  1  0)
+  ( 0  0  1)
+
+27 k-points: 3 x 3 x 3 Monkhorst-Pack grid
+14 k-points in the irreducible part of the Brillouin zone
+       k-points in crystal coordinates                weights
+   0:     0.00000000    0.00000000    0.00000000          1/27
+   1:     0.00000000    0.00000000    0.33333333          2/27
+   2:     0.00000000    0.33333333   -0.33333333          2/27
+   3:     0.00000000    0.33333333    0.00000000          2/27
+   4:     0.00000000    0.33333333    0.33333333          2/27
+   5:     0.33333333   -0.33333333   -0.33333333          2/27
+   6:     0.33333333   -0.33333333    0.00000000          2/27
+   7:     0.33333333   -0.33333333    0.33333333          2/27
+   8:     0.33333333    0.00000000   -0.33333333          2/27
+   9:     0.33333333    0.00000000    0.00000000          2/27
+          ...
+  13:     0.33333333    0.33333333    0.33333333          2/27
+
+Wave functions: LCAO
+  Diagonalizer: Serial LAPACK
+  Atomic Correction: dense with blas
+  Data-type: complex
+ 
+
+Occupation numbers: Fermi-Dirac:
+  width: 0.1000  # eV
+ 
+
+Eigensolver
+   LCAO using direct dense diagonalizer 
+
+Densities:
+  Coarse grid: 16*16*16 grid
+  Fine grid: 32*32*32 grid
+  Total Charge: 0.000000 
+
+Density mixing:
+  Method: separate
+  Backend: pulay
+  Linear mixing parameter: 0.05
+  old densities: 5
+  Damping of long wavelength oscillations: 50 
+
+Hamiltonian:
+  XC and Coulomb potentials evaluated on a 32*32*32 grid
+  Using the PBE Exchange-Correlation functional
+  Interpolation: tri-quintic (5. degree polynomial)
+  Poisson solver: FastPoissonSolver using
+    Stencil: 12*3+1=37 point O(h^6) finite-difference Laplacian
+    FFT axes: [np.int64(0), np.int64(1), np.int64(2)]
+    FST axes: []
+ 
+
+XC parameters: PBE with 2 nearest neighbor stencil
+
+Memory estimate:
+  Process memory now: 97.53 MiB
+  Calculator: 13.42 MiB
+    Density: 5.65 MiB
+      Arrays: 0.81 MiB
+      Localized functions: 4.52 MiB
+      Mixer: 0.31 MiB
+    Hamiltonian: 0.87 MiB
+      Arrays: 0.53 MiB
+      XC: 0.00 MiB
+      Poisson: 0.00 MiB
+      vbar: 0.34 MiB
+    Wavefunctions: 6.90 MiB
+      C [qnM]: 0.04 MiB
+      S, T [2 x qmm]: 0.29 MiB
+      P [aqMi]: 0.01 MiB
+      BasisFunctions: 6.56 MiB
+      Eigensolver: 0.00 MiB
+
+Total number of cores used: 1
+
+Number of atoms: 2
+Number of atomic orbitals: 26
+Number of bands in calculation: 8
+Number of valence electrons: 8
+Bands to converge: occupied
+
+... initialized
+
+Initializing position-dependent things.
+
+Density initialized from atomic densities
+                    
+                    
+                    
+                    
+           Si       
+                    
+       Si           
+                    
+                    
+                    
+                    
+
+Positions:
+   0 Si     0.000000    0.000000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Si     1.357500    1.357500    1.357500    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    0.000000    2.715000    2.715000    16     0.1959
+  2. axis:    yes    2.715000    0.000000    2.715000    16     0.1959
+  3. axis:    yes    2.715000    2.715000    0.000000    16     0.1959
+
+  Lengths:   3.839590   3.839590   3.839590
+  Angles:   60.000000  60.000000  60.000000
+
+Effective grid spacing dv^(1/3) = 0.2138
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 13:50:54    -9.988455        c
+iter:   2 13:50:55    -9.984938        c -0.79
+iter:   3 13:50:56    -9.970192        c -0.81
+iter:   4 13:50:57    -9.968178        c -1.83
+iter:   5 13:50:58    -9.968210c       c -2.13
+iter:   6 13:50:59    -9.968216c       c -3.56
+iter:   7 13:51:00    -9.968209c       c -3.40
+iter:   8 13:51:01    -9.968209c       c -4.54c
+
+Converged after 8 iterations.
+
+Dipole moment: (-3.882927, -3.882927, -3.882927) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -15772.688500)
+
+Kinetic:        +15.801525
+Potential:      -12.934369
+External:        +0.000000
+XC:             -12.821487
+Entropy (-ST):   -0.006829
+Local:           -0.010462
+SIC:             +0.000000
+--------------------------
+Free energy:     -9.971623
+Extrapolated:    -9.968209
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0     2      5.40589    1.93548
+  0     3      5.40589    1.93548
+  0     4      8.01486    0.00000
+  0     5      8.01500    0.00000
+
+  1     2      4.38913    2.00000
+  1     3      4.38962    2.00000
+  1     4      7.21897    0.00000
+  1     5      9.03734    0.00000
+
+
+Fermi level: 5.74601
+
+Gap: 0.751 eV
+Transition (v -> c):
+  (s=0, k=0, n=3, [0.00, 0.00, 0.00]) -> (s=0, k=4, n=4, [0.00, 0.33, 0.33])
+Direct/indirect transitions are different
+Direct gap: 2.609 eV
+Transition at: (s=0, k=0, n=3, [0.00, 0.00, 0.00])
+System changes: cell, numbers, positions 
+
+Initialize ...
+
+species:
+  Si:
+    name: Silicon
+    id: ee77bee481871cc2cb65ac61239ccafa
+    Z: 14.0
+    valence: 4
+    core: 10
+    charge: 0.0
+    file: /Users/tshepo/.gpaw/gpaw-setups-24.11.0/Si.PBE.gz
+    compensation charges: {type: gauss,
+                           rc: 0.33,
+                           lmax: 2}
+    cutoffs: {filter: 1.86,
+              core: 2.06}
+    projectors:
+      #              energy  rcut
+      - 3s(2.00)   -10.812   1.058
+      - 3p(2.00)    -4.081   1.058
+      -  s          16.399   1.058
+      -  p          23.130   1.058
+      -  d           0.000   1.058
+  
+    # LCAO basis set for Si:
+    #   Name: dzp
+    #   File: /Users/tshepo/.gpaw/gpaw-setups-24.11.0/Si.dzp.basis.gz
+    #   Number of radial functions: 5
+    #   Number of spherical harmonics: 13
+    #     l=0, rc=6.8594 Bohr: 3s-sz confined orbital
+    #     l=1, rc=9.0625 Bohr: 3p-sz confined orbital
+    #     l=0, rc=3.8906 Bohr: 3s-dz split-valence wave
+    #     l=1, rc=5.2344 Bohr: 3p-dz split-valence wave
+    #     l=2, rc=9.0625 Bohr: d-type Gaussian polarization
+    #   Number of RI-basis functions 0
+
+Reference energy: -425862.589512  # eV
+
+Spin-paired calculation
+
+Convergence criteria:
+ Maximum [total energy] change in last 3 cyles: 0.0005 eV / valence electron
+ Maximum integral of absolute [dens]ity change: 0.0001 electrons / valence electron
+ Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+ Maximum number of scf [iter]ations: 333
+ (Square brackets indicate name in SCF output, whereas a 'c' in
+ the SCF output indicates the quantity has converged.)
+
+Symmetries present (total): 1
+
+  ( 1  0  0)
+  ( 0  1  0)
+  ( 0  0  1)
+
+27 k-points: 3 x 3 x 3 Monkhorst-Pack grid
+14 k-points in the irreducible part of the Brillouin zone
+       k-points in crystal coordinates                weights
+   0:     0.00000000    0.00000000    0.00000000          1/27
+   1:     0.00000000    0.00000000    0.33333333          2/27
+   2:     0.00000000    0.33333333   -0.33333333          2/27
+   3:     0.00000000    0.33333333    0.00000000          2/27
+   4:     0.00000000    0.33333333    0.33333333          2/27
+   5:     0.33333333   -0.33333333   -0.33333333          2/27
+   6:     0.33333333   -0.33333333    0.00000000          2/27
+   7:     0.33333333   -0.33333333    0.33333333          2/27
+   8:     0.33333333    0.00000000   -0.33333333          2/27
+   9:     0.33333333    0.00000000    0.00000000          2/27
+          ...
+  13:     0.33333333    0.33333333    0.33333333          2/27
+
+Wave functions: LCAO
+  Diagonalizer: Serial LAPACK
+  Atomic Correction: dense with blas
+  Data-type: complex
+ 
+
+Occupation numbers: Fermi-Dirac:
+  width: 0.1000  # eV
+ 
+
+Eigensolver
+   LCAO using direct dense diagonalizer 
+
+Densities:
+  Coarse grid: 52*52*52 grid
+  Fine grid: 104*104*104 grid
+  Total Charge: 0.000000 
+
+Density mixing:
+  Method: separate
+  Backend: pulay
+  Linear mixing parameter: 0.05
+  old densities: 5
+  Damping of long wavelength oscillations: 50 
+
+Hamiltonian:
+  XC and Coulomb potentials evaluated on a 104*104*104 grid
+  Using the PBE Exchange-Correlation functional
+  Interpolation: tri-quintic (5. degree polynomial)
+  Poisson solver: FastPoissonSolver using
+    Stencil: 12*3+1=37 point O(h^6) finite-difference Laplacian
+    FFT axes: [np.int64(0), np.int64(1), np.int64(2)]
+    FST axes: []
+ 
+
+XC parameters: PBE with 2 nearest neighbor stencil
+
+Memory estimate:
+  Process memory now: 284.16 MiB
+  Calculator: 686.02 MiB
+    Density: 193.89 MiB
+      Arrays: 27.89 MiB
+      Localized functions: 155.27 MiB
+      Mixer: 10.73 MiB
+    Hamiltonian: 29.78 MiB
+      Arrays: 18.24 MiB
+      XC: 0.00 MiB
+      Poisson: 0.00 MiB
+      vbar: 11.54 MiB
+    Wavefunctions: 462.35 MiB
+      C [qnM]: 20.10 MiB
+      S, T [2 x qmm]: 210.55 MiB
+      P [aqMi]: 6.58 MiB
+      BasisFunctions: 225.13 MiB
+      Eigensolver: 0.00 MiB
+
+Total number of cores used: 1
+
+Number of atoms: 54
+Number of atomic orbitals: 702
+Number of bands in calculation: 134
+Number of valence electrons: 216
+Bands to converge: occupied
+
+... initialized
+
+Initializing position-dependent things.
+
+Density initialized from atomic densities
+                                                      
+                                                      
+                                                      
+                                                      
+                                             Si       
+                                    Si                
+                                         Si           
+                            Si        Si              
+                                Si                    
+                              Si           Si         
+                     Si Si     Si SSi                 
+                          Si           Si             
+                       Si Si        Si                
+                 Si        Si  Si                     
+               Si           Si           Si           
+                   SSiSi      SiSSi                   
+           Si           Si           Si               
+                     Si  Si        Si                 
+                Si        Si Si                       
+             Si           Si                          
+                 SSi Si     Si Si                     
+         Si           Si                              
+                    Si                                
+              Si        Si                            
+           Si                                         
+                Si                                    
+       Si                                             
+                                                      
+                                                      
+                                                      
+                                                      
+
+Positions:
+   0 Si     0.000000    0.000000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Si     1.357500    1.357500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   2 Si     2.715000    2.715000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   3 Si     4.072500    4.072500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   4 Si     5.430000    5.430000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   5 Si     6.787500    6.787500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   6 Si     2.715000    0.000000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   7 Si     4.072500    1.357500    4.072500    ( 0.0000,  0.0000,  0.0000)
+   8 Si     5.430000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   9 Si     6.787500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  10 Si     8.145000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  11 Si     9.502500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  12 Si     5.430000    0.000000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  13 Si     6.787500    1.357500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  14 Si     8.145000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  15 Si     9.502500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  16 Si    10.860000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  17 Si    12.217500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  18 Si     0.000000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  19 Si     1.357500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  20 Si     2.715000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  21 Si     4.072500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  22 Si     5.430000    8.145000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  23 Si     6.787500    9.502500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  24 Si     2.715000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  25 Si     4.072500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  26 Si     5.430000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  27 Si     6.787500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  28 Si     8.145000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  29 Si     9.502500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  30 Si     5.430000    2.715000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  31 Si     6.787500    4.072500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  32 Si     8.145000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  33 Si     9.502500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  34 Si    10.860000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  35 Si    12.217500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  36 Si     0.000000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  37 Si     1.357500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  38 Si     2.715000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  39 Si     4.072500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  40 Si     5.430000   10.860000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  41 Si     6.787500   12.217500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  42 Si     2.715000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  43 Si     4.072500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  44 Si     5.430000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  45 Si     6.787500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  46 Si     8.145000   10.860000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  47 Si     9.502500   12.217500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  48 Si     5.430000    5.430000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  49 Si     6.787500    6.787500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  50 Si     8.145000    8.145000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  51 Si     9.502500    9.502500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  52 Si    10.860000   10.860000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  53 Si    12.217500   12.217500   12.217500    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    0.000000    8.145000    8.145000    52     0.1809
+  2. axis:    yes    8.145000    0.000000    8.145000    52     0.1809
+  3. axis:    yes    8.145000    8.145000    0.000000    52     0.1809
+
+  Lengths:  11.518769  11.518769  11.518769
+  Angles:   60.000000  60.000000  60.000000
+
+Effective grid spacing dv^(1/3) = 0.1973
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 13:51:13  -285.869974        c
+iter:   2 13:51:48  -285.859324        c -0.84
+iter:   3 13:52:23  -285.992969        c -0.86
+iter:   4 13:52:58  -285.944344        c -1.90
+iter:   5 13:53:33  -285.941870c       c -2.25
+iter:   6 13:54:08  -285.941859c       c -3.64
+iter:   7 13:54:43  -285.941890c       c -3.69
+iter:   8 13:55:18  -285.941877c       c -3.71
+iter:   9 13:55:53  -285.941878c       c -5.30c
+
+Converged after 9 iterations.
+
+Dipole moment: (-105.111680, -105.111680, -105.111680) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -425862.589512)
+
+Kinetic:       +382.911595
+Potential:     -333.170432
+External:        +0.000000
+XC:            -335.145508
+Entropy (-ST):   -0.021587
+Local:           -0.526739
+SIC:             +0.000000
+--------------------------
+Free energy:   -285.952671
+Extrapolated:  -285.941878
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0   106      5.30739    1.90662
+  0   107      5.30739    1.90662
+  0   108      6.09490    0.01540
+  0   109      6.09500    0.01539
+
+  1   106      5.06747    1.99115
+  1   107      5.06784    1.99111
+  1   108      6.34949    0.00122
+  1   109      6.34971    0.00121
+
+
+Fermi level: 5.60903
+
+Gap: 0.651 eV
+Transition (v -> c):
+  (s=0, k=0, n=107, [0.00, 0.00, 0.00]) -> (s=0, k=4, n=108, [0.00, 0.33, 0.33])
+Direct/indirect transitions are different
+Direct gap: 0.788 eV
+Transition at: (s=0, k=0, n=107, [0.00, 0.00, 0.00])
+
+Forces in eV/Ang:
+  0 Si    0.00070    0.00070    0.00070
+  1 Si    0.00154    0.00154    0.00154
+  2 Si    0.00134    0.00134    0.00275
+  3 Si   -0.00070   -0.00070    0.00827
+  4 Si    0.00006    0.00006    0.00275
+  5 Si   -0.00295   -0.00295    0.00154
+  6 Si    0.00134    0.00275    0.00134
+  7 Si   -0.00070    0.00827   -0.00070
+  8 Si   -0.00004    0.00145    0.00145
+  9 Si   -0.00968   -0.00070   -0.00070
+ 10 Si   -0.00135    0.00006    0.00135
+ 11 Si   -0.00135   -0.00006    0.00135
+ 12 Si    0.00006    0.00275    0.00006
+ 13 Si   -0.00295    0.00154   -0.00295
+ 14 Si   -0.00135    0.00135    0.00006
+ 15 Si   -0.00135    0.00135   -0.00006
+ 16 Si   -0.00154    0.00295    0.00295
+ 17 Si   -0.00275   -0.00006   -0.00006
+ 18 Si    0.00275    0.00134    0.00134
+ 19 Si    0.00827   -0.00070   -0.00070
+ 20 Si    0.00145   -0.00004    0.00145
+ 21 Si   -0.00070   -0.00968   -0.00070
+ 22 Si    0.00006   -0.00135    0.00135
+ 23 Si   -0.00006   -0.00135    0.00135
+ 24 Si    0.00145    0.00145   -0.00004
+ 25 Si   -0.00070   -0.00070   -0.00968
+ 26 Si   -0.00004   -0.00004   -0.00004
+ 27 Si    0.00004    0.00004    0.00004
+ 28 Si    0.00070    0.00070    0.00968
+ 29 Si   -0.00145   -0.00145    0.00004
+ 30 Si    0.00006    0.00135   -0.00135
+ 31 Si   -0.00006    0.00135   -0.00135
+ 32 Si    0.00070    0.00968    0.00070
+ 33 Si   -0.00145    0.00004   -0.00145
+ 34 Si   -0.00827    0.00070    0.00070
+ 35 Si   -0.00275   -0.00134   -0.00134
+ 36 Si    0.00275    0.00006    0.00006
+ 37 Si    0.00154   -0.00295   -0.00295
+ 38 Si    0.00135   -0.00135    0.00006
+ 39 Si    0.00135   -0.00135   -0.00006
+ 40 Si    0.00295   -0.00154    0.00295
+ 41 Si   -0.00006   -0.00275   -0.00006
+ 42 Si    0.00135    0.00006   -0.00135
+ 43 Si    0.00135   -0.00006   -0.00135
+ 44 Si    0.00968    0.00070    0.00070
+ 45 Si    0.00004   -0.00145   -0.00145
+ 46 Si    0.00070   -0.00827    0.00070
+ 47 Si   -0.00134   -0.00275   -0.00134
+ 48 Si    0.00295    0.00295   -0.00154
+ 49 Si   -0.00006   -0.00006   -0.00275
+ 50 Si    0.00070    0.00070   -0.00827
+ 51 Si   -0.00134   -0.00134   -0.00275
+ 52 Si   -0.00154   -0.00154   -0.00154
+ 53 Si   -0.00070   -0.00070   -0.00070
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+                                                      
+                                                      
+                                                      
+                                                      
+                                             Si       
+                                    Si                
+                                         Si           
+                            Si        Si              
+                                Si                    
+                              Si           Si         
+                     Si Si     Si SSi                 
+                          Si           Si             
+                       Si Si        Si                
+                 Si        Si  Si                     
+               Si           Si           Si           
+                   SSiSi      SiSSi                   
+           Si           Si           Si               
+                     Si  Si        Si                 
+                Si        Si Si                       
+             Si           Si                          
+                 SSi Si     Si Si                     
+         Si           Si                              
+                    Si                                
+              Si        Si                            
+           Si                                         
+                Si                                    
+       Si                                             
+                                                      
+                                                      
+                                                      
+                                                      
+
+Positions:
+   0 Si     0.000000    0.000000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Si     1.357500    1.357500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   2 Si     2.715000    2.715000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   3 Si     4.072500    4.072500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   4 Si     5.430000    5.430000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   5 Si     6.787500    6.787500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   6 Si     2.715000    0.000000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   7 Si     4.072500    1.357500    4.072500    ( 0.0000,  0.0000,  0.0000)
+   8 Si     5.430000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   9 Si     6.787500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  10 Si     8.145000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  11 Si     9.502500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  12 Si     5.430000    0.000000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  13 Si     6.787500    1.357500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  14 Si     8.145000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  15 Si     9.502500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  16 Si    10.860000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  17 Si    12.217500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  18 Si     0.000000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  19 Si     1.357500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  20 Si     2.715000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  21 Si     4.072500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  22 Si     5.430000    8.145000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  23 Si     6.787500    9.502500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  24 Si     2.715000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  25 Si     4.072500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  26 Si     5.420000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  27 Si     6.787500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  28 Si     8.145000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  29 Si     9.502500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  30 Si     5.430000    2.715000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  31 Si     6.787500    4.072500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  32 Si     8.145000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  33 Si     9.502500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  34 Si    10.860000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  35 Si    12.217500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  36 Si     0.000000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  37 Si     1.357500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  38 Si     2.715000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  39 Si     4.072500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  40 Si     5.430000   10.860000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  41 Si     6.787500   12.217500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  42 Si     2.715000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  43 Si     4.072500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  44 Si     5.430000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  45 Si     6.787500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  46 Si     8.145000   10.860000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  47 Si     9.502500   12.217500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  48 Si     5.430000    5.430000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  49 Si     6.787500    6.787500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  50 Si     8.145000    8.145000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  51 Si     9.502500    9.502500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  52 Si    10.860000   10.860000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  53 Si    12.217500   12.217500   12.217500    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    0.000000    8.145000    8.145000    52     0.1809
+  2. axis:    yes    8.145000    0.000000    8.145000    52     0.1809
+  3. axis:    yes    8.145000    8.145000    0.000000    52     0.1809
+
+  Lengths:  11.518769  11.518769  11.518769
+  Angles:   60.000000  60.000000  60.000000
+
+Effective grid spacing dv^(1/3) = 0.1973
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 13:59:05  -285.941317        c
+iter:   2 13:59:40  -285.941270        c -3.77
+iter:   3 14:00:15  -285.941175c       c -3.87
+iter:   4 14:00:50  -285.941162c       c -4.00
+iter:   5 14:01:25  -285.941161c       c -4.36c
+
+Converged after 5 iterations.
+
+Dipole moment: (-105.112973, -105.111762, -105.111762) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -425862.589512)
+
+Kinetic:       +382.958270
+Potential:     -333.204770
+External:        +0.000000
+XC:            -335.148504
+Entropy (-ST):   -0.021590
+Local:           -0.535363
+SIC:             +0.000000
+--------------------------
+Free energy:   -285.951955
+Extrapolated:  -285.941161
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0   106      5.30721    1.90679
+  0   107      5.30896    1.90522
+  0   108      6.09317    0.01567
+  0   109      6.09353    0.01561
+
+  1   106      5.06712    1.99118
+  1   107      5.06919    1.99099
+  1   108      6.34852    0.00123
+  1   109      6.34976    0.00121
+
+
+Fermi level: 5.60904
+
+Gap: 0.650 eV
+Transition (v -> c):
+  (s=0, k=0, n=107, [0.00, 0.00, 0.00]) -> (s=0, k=4, n=108, [0.00, 0.33, 0.33])
+Direct/indirect transitions are different
+Direct gap: 0.784 eV
+Transition at: (s=0, k=0, n=107, [0.00, 0.00, 0.00])
+
+Forces in eV/Ang:
+  0 Si    0.00011    0.00171    0.00171
+  1 Si    0.00094    0.00145    0.00145
+  2 Si    0.00067    0.00225    0.00164
+  3 Si   -0.00020   -0.00082    0.00852
+  4 Si   -0.00082   -0.00008    0.00267
+  5 Si   -0.00234   -0.00295    0.00138
+  6 Si    0.00067    0.00164    0.00225
+  7 Si   -0.00020    0.00852   -0.00082
+  8 Si    0.00448    0.00040    0.00040
+  9 Si   -0.04505    0.02395    0.02395
+ 10 Si   -0.00304    0.00175    0.00307
+ 11 Si   -0.00040    0.00063    0.00053
+ 12 Si   -0.00082    0.00267   -0.00008
+ 13 Si   -0.00234    0.00138   -0.00295
+ 14 Si   -0.00304    0.00307    0.00175
+ 15 Si   -0.00040    0.00053    0.00063
+ 16 Si   -0.00109    0.00282    0.00282
+ 17 Si   -0.00296   -0.00029   -0.00029
+ 18 Si    0.00206    0.00024    0.00024
+ 19 Si    0.00930    0.00005    0.00005
+ 20 Si   -0.00025    0.00146   -0.00028
+ 21 Si   -0.03625    0.01547   -0.02598
+ 22 Si    0.00481   -0.00242    0.00241
+ 23 Si    0.00037   -0.00119    0.00140
+ 24 Si   -0.00025   -0.00028    0.00146
+ 25 Si   -0.03625   -0.02598    0.01547
+ 26 Si    0.14646   -0.00053   -0.00053
+ 27 Si   -0.03505   -0.02443   -0.02443
+ 28 Si   -0.00107   -0.00111    0.00819
+ 29 Si   -0.00134   -0.00203    0.00019
+ 30 Si    0.00481    0.00241   -0.00242
+ 31 Si    0.00037    0.00140   -0.00119
+ 32 Si   -0.00107    0.00819   -0.00111
+ 33 Si   -0.00134    0.00019   -0.00203
+ 34 Si   -0.00897    0.00001    0.00001
+ 35 Si   -0.00576   -0.00125   -0.00125
+ 36 Si    0.00305    0.00011    0.00011
+ 37 Si    0.00233   -0.00357   -0.00357
+ 38 Si   -0.00055    0.00057   -0.00153
+ 39 Si    0.00176   -0.00133    0.00002
+ 40 Si    0.00189   -0.00148    0.00301
+ 41 Si   -0.00039   -0.00286    0.00010
+ 42 Si   -0.00055   -0.00153    0.00057
+ 43 Si    0.00176    0.00002   -0.00133
+ 44 Si    0.01451    0.00186    0.00186
+ 45 Si   -0.00291   -0.00156   -0.00156
+ 46 Si    0.00017   -0.00914    0.00137
+ 47 Si   -0.00104   -0.00264   -0.00078
+ 48 Si    0.00189    0.00301   -0.00148
+ 49 Si   -0.00039    0.00010   -0.00286
+ 50 Si    0.00017    0.00137   -0.00914
+ 51 Si   -0.00104   -0.00078   -0.00264
+ 52 Si   -0.00196   -0.00077   -0.00077
+ 53 Si   -0.00100   -0.00051   -0.00051
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+                                                      
+                                                      
+                                                      
+                                                      
+                                             Si       
+                                    Si                
+                                         Si           
+                            Si        Si              
+                                Si                    
+                              Si           Si         
+                     Si Si     Si SSi                 
+                          Si           Si             
+                       Si Si        Si                
+                 Si        Si  Si                     
+               Si           Si           Si           
+                   SSiSi      SiSSi                   
+           Si           Si           Si               
+                     Si  Si        Si                 
+                Si        Si Si                       
+             Si           Si                          
+                 SSi Si     Si Si                     
+         Si           Si                              
+                    Si                                
+              Si        Si                            
+           Si                                         
+                Si                                    
+       Si                                             
+                                                      
+                                                      
+                                                      
+                                                      
+
+Positions:
+   0 Si     0.000000    0.000000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Si     1.357500    1.357500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   2 Si     2.715000    2.715000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   3 Si     4.072500    4.072500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   4 Si     5.430000    5.430000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   5 Si     6.787500    6.787500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   6 Si     2.715000    0.000000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   7 Si     4.072500    1.357500    4.072500    ( 0.0000,  0.0000,  0.0000)
+   8 Si     5.430000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   9 Si     6.787500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  10 Si     8.145000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  11 Si     9.502500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  12 Si     5.430000    0.000000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  13 Si     6.787500    1.357500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  14 Si     8.145000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  15 Si     9.502500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  16 Si    10.860000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  17 Si    12.217500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  18 Si     0.000000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  19 Si     1.357500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  20 Si     2.715000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  21 Si     4.072500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  22 Si     5.430000    8.145000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  23 Si     6.787500    9.502500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  24 Si     2.715000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  25 Si     4.072500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  26 Si     5.440000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  27 Si     6.787500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  28 Si     8.145000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  29 Si     9.502500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  30 Si     5.430000    2.715000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  31 Si     6.787500    4.072500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  32 Si     8.145000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  33 Si     9.502500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  34 Si    10.860000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  35 Si    12.217500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  36 Si     0.000000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  37 Si     1.357500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  38 Si     2.715000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  39 Si     4.072500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  40 Si     5.430000   10.860000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  41 Si     6.787500   12.217500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  42 Si     2.715000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  43 Si     4.072500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  44 Si     5.430000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  45 Si     6.787500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  46 Si     8.145000   10.860000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  47 Si     9.502500   12.217500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  48 Si     5.430000    5.430000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  49 Si     6.787500    6.787500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  50 Si     8.145000    8.145000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  51 Si     9.502500    9.502500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  52 Si    10.860000   10.860000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  53 Si    12.217500   12.217500   12.217500    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    0.000000    8.145000    8.145000    52     0.1809
+  2. axis:    yes    8.145000    0.000000    8.145000    52     0.1809
+  3. axis:    yes    8.145000    8.145000    0.000000    52     0.1809
+
+  Lengths:  11.518769  11.518769  11.518769
+  Angles:   60.000000  60.000000  60.000000
+
+Effective grid spacing dv^(1/3) = 0.1973
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 14:04:36  -285.941784        c
+iter:   2 14:05:11  -285.941595        c -3.47
+iter:   3 14:05:46  -285.941212c       c -3.57
+iter:   4 14:06:21  -285.941162c       c -3.70
+iter:   5 14:06:56  -285.941157c       c -4.06c
+
+Converged after 5 iterations.
+
+Dipole moment: (-105.109829, -105.111762, -105.111762) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -425862.589512)
+
+Kinetic:       +382.958151
+Potential:     -333.204533
+External:        +0.000000
+XC:            -335.148484
+Entropy (-ST):   -0.021590
+Local:           -0.535496
+SIC:             +0.000000
+--------------------------
+Free energy:   -285.951952
+Extrapolated:  -285.941157
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0   106      5.30726    1.90674
+  0   107      5.30924    1.90497
+  0   108      6.09322    0.01566
+  0   109      6.09356    0.01561
+
+  1   106      5.06598    1.99128
+  1   107      5.06839    1.99107
+  1   108      6.34808    0.00123
+  1   109      6.34956    0.00122
+
+
+Fermi level: 5.60904
+
+Gap: 0.649 eV
+Transition (v -> c):
+  (s=0, k=0, n=107, [0.00, 0.00, 0.00]) -> (s=0, k=4, n=108, [0.00, 0.33, 0.33])
+Direct/indirect transitions are different
+Direct gap: 0.784 eV
+Transition at: (s=0, k=0, n=107, [0.00, 0.00, 0.00])
+
+Forces in eV/Ang:
+  0 Si    0.00139   -0.00077   -0.00077
+  1 Si    0.00272    0.00146    0.00146
+  2 Si    0.00195   -0.00022    0.00411
+  3 Si   -0.00108   -0.00106    0.00873
+  4 Si    0.00155    0.00048    0.00266
+  5 Si   -0.00323   -0.00321    0.00116
+  6 Si    0.00195    0.00411   -0.00022
+  7 Si   -0.00108    0.00873   -0.00106
+  8 Si   -0.00409    0.00303    0.00303
+  9 Si    0.02584   -0.02612   -0.02612
+ 10 Si    0.00066   -0.00230   -0.00045
+ 11 Si   -0.00287   -0.00108    0.00226
+ 12 Si    0.00155    0.00266    0.00048
+ 13 Si   -0.00323    0.00116   -0.00321
+ 14 Si    0.00066   -0.00045   -0.00230
+ 15 Si   -0.00287    0.00226   -0.00108
+ 16 Si   -0.00258    0.00283    0.00283
+ 17 Si   -0.00175    0.00026    0.00026
+ 18 Si    0.00335    0.00271    0.00271
+ 19 Si    0.00684   -0.00166   -0.00166
+ 20 Si    0.00342   -0.00259    0.00322
+ 21 Si    0.03465   -0.03461    0.02413
+ 22 Si   -0.00379    0.00024   -0.00024
+ 23 Si   -0.00051   -0.00097    0.00165
+ 24 Si    0.00342    0.00322   -0.00259
+ 25 Si    0.03465    0.02413   -0.03461
+ 26 Si   -0.15070    0.00083    0.00083
+ 27 Si    0.03584    0.02562    0.02562
+ 28 Si    0.00261    0.00239    0.01223
+ 29 Si   -0.00230   -0.00073    0.00018
+ 30 Si   -0.00379   -0.00024    0.00024
+ 31 Si   -0.00051    0.00165   -0.00097
+ 32 Si    0.00261    0.01223    0.00239
+ 33 Si   -0.00230    0.00018   -0.00073
+ 34 Si   -0.00785    0.00152    0.00152
+ 35 Si   -0.00006   -0.00126   -0.00126
+ 36 Si    0.00158    0.00011    0.00011
+ 37 Si   -0.00019   -0.00184   -0.00184
+ 38 Si    0.00314   -0.00294    0.00251
+ 39 Si    0.00087   -0.00155    0.00026
+ 40 Si    0.00427   -0.00149    0.00246
+ 41 Si    0.00083   -0.00231   -0.00042
+ 42 Si    0.00314    0.00251   -0.00294
+ 43 Si    0.00087    0.00026   -0.00155
+ 44 Si    0.00590   -0.00081   -0.00081
+ 45 Si    0.00278   -0.00155   -0.00155
+ 46 Si    0.00127   -0.00760   -0.00015
+ 47 Si   -0.00200   -0.00263   -0.00210
+ 48 Si    0.00427    0.00246   -0.00149
+ 49 Si    0.00083   -0.00042   -0.00231
+ 50 Si    0.00127   -0.00015   -0.00760
+ 51 Si   -0.00200   -0.00210   -0.00263
+ 52 Si   -0.00087   -0.00229   -0.00229
+ 53 Si    0.00020   -0.00105   -0.00105
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+                                                      
+                                                      
+                                                      
+                                                      
+                                             Si       
+                                    Si                
+                                         Si           
+                            Si        Si              
+                                Si                    
+                              Si           Si         
+                     Si Si     Si SSi                 
+                          Si           Si             
+                       Si Si        Si                
+                 Si        Si  Si                     
+               Si           Si           Si           
+                   SSiSi      SiSSi                   
+           Si           Si           Si               
+                     Si  Si        Si                 
+                Si        Si Si                       
+             Si           Si                          
+                 SSi Si     Si Si                     
+         Si           Si                              
+                    Si                                
+              Si        Si                            
+           Si                                         
+                Si                                    
+       Si                                             
+                                                      
+                                                      
+                                                      
+                                                      
+
+Positions:
+   0 Si     0.000000    0.000000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Si     1.357500    1.357500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   2 Si     2.715000    2.715000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   3 Si     4.072500    4.072500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   4 Si     5.430000    5.430000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   5 Si     6.787500    6.787500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   6 Si     2.715000    0.000000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   7 Si     4.072500    1.357500    4.072500    ( 0.0000,  0.0000,  0.0000)
+   8 Si     5.430000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   9 Si     6.787500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  10 Si     8.145000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  11 Si     9.502500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  12 Si     5.430000    0.000000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  13 Si     6.787500    1.357500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  14 Si     8.145000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  15 Si     9.502500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  16 Si    10.860000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  17 Si    12.217500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  18 Si     0.000000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  19 Si     1.357500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  20 Si     2.715000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  21 Si     4.072500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  22 Si     5.430000    8.145000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  23 Si     6.787500    9.502500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  24 Si     2.715000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  25 Si     4.072500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  26 Si     5.430000    5.420000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  27 Si     6.787500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  28 Si     8.145000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  29 Si     9.502500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  30 Si     5.430000    2.715000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  31 Si     6.787500    4.072500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  32 Si     8.145000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  33 Si     9.502500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  34 Si    10.860000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  35 Si    12.217500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  36 Si     0.000000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  37 Si     1.357500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  38 Si     2.715000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  39 Si     4.072500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  40 Si     5.430000   10.860000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  41 Si     6.787500   12.217500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  42 Si     2.715000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  43 Si     4.072500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  44 Si     5.430000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  45 Si     6.787500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  46 Si     8.145000   10.860000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  47 Si     9.502500   12.217500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  48 Si     5.430000    5.430000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  49 Si     6.787500    6.787500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  50 Si     8.145000    8.145000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  51 Si     9.502500    9.502500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  52 Si    10.860000   10.860000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  53 Si    12.217500   12.217500   12.217500    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    0.000000    8.145000    8.145000    52     0.1809
+  2. axis:    yes    8.145000    0.000000    8.145000    52     0.1809
+  3. axis:    yes    8.145000    8.145000    0.000000    52     0.1809
+
+  Lengths:  11.518769  11.518769  11.518769
+  Angles:   60.000000  60.000000  60.000000
+
+Effective grid spacing dv^(1/3) = 0.1973
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 14:10:12  -285.941482        c
+iter:   2 14:10:47  -285.941384        c -3.61
+iter:   3 14:25:58  -285.941188c       c -3.70
+iter:   4 14:26:33  -285.941163c       c -3.87
+iter:   5 14:27:08  -285.941161c       c -4.22c
+
+Converged after 5 iterations.
+
+Dipole moment: (-105.112441, -105.113023, -105.111759) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -425862.589512)
+
+Kinetic:       +382.958681
+Potential:     -333.205034
+External:        +0.000000
+XC:            -335.148534
+Entropy (-ST):   -0.021590
+Local:           -0.535479
+SIC:             +0.000000
+--------------------------
+Free energy:   -285.951956
+Extrapolated:  -285.941161
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0   106      5.30721    1.90679
+  0   107      5.30896    1.90522
+  0   108      6.09317    0.01567
+  0   109      6.09353    0.01561
+
+  1   106      5.06712    1.99118
+  1   107      5.06919    1.99099
+  1   108      6.34852    0.00123
+  1   109      6.34976    0.00121
+
+
+Fermi level: 5.60904
+
+Gap: 0.650 eV
+Transition (v -> c):
+  (s=0, k=0, n=107, [0.00, 0.00, 0.00]) -> (s=0, k=10, n=108, [0.33, 0.00, 0.33])
+Direct/indirect transitions are different
+Direct gap: 0.784 eV
+Transition at: (s=0, k=0, n=107, [0.00, 0.00, 0.00])
+
+Forces in eV/Ang:
+  0 Si    0.00154    0.00068    0.00219
+  1 Si    0.00065    0.00094    0.00145
+  2 Si    0.00208    0.00123    0.00116
+  3 Si   -0.00091    0.00035    0.00809
+  4 Si   -0.00072   -0.00100    0.00268
+  5 Si   -0.00305   -0.00180    0.00181
+  6 Si    0.00015    0.00158    0.00080
+  7 Si   -0.00012    0.00878    0.00051
+  8 Si    0.00071   -0.00070   -0.00077
+  9 Si    0.01526   -0.03586   -0.02587
+ 10 Si   -0.00243    0.00562    0.00220
+ 11 Si   -0.00036    0.00065    0.00112
+ 12 Si   -0.00049    0.00299   -0.00011
+ 13 Si   -0.00357    0.00259   -0.00294
+ 14 Si    0.00073   -0.00088   -0.00070
+ 15 Si   -0.00042    0.00147    0.00031
+ 16 Si   -0.00076    0.00193    0.00305
+ 17 Si   -0.00352   -0.00057   -0.00006
+ 18 Si    0.00154    0.00019    0.00169
+ 19 Si    0.00934    0.00010   -0.00053
+ 20 Si    0.00037    0.00532    0.00061
+ 21 Si    0.02372   -0.04464    0.02384
+ 22 Si    0.00098   -0.00347    0.00356
+ 23 Si    0.00044   -0.00091    0.00008
+ 24 Si   -0.00043   -0.00012    0.00223
+ 25 Si   -0.02638   -0.03625    0.01578
+ 26 Si    0.00297    0.14692   -0.00053
+ 27 Si   -0.02486   -0.03507   -0.02474
+ 28 Si   -0.00125   -0.00093    0.00741
+ 29 Si   -0.00153   -0.00177    0.00018
+ 30 Si   -0.00221   -0.00031    0.00039
+ 31 Si   -0.00007    0.00122   -0.00167
+ 32 Si    0.00189    0.01370    0.00212
+ 33 Si   -0.00104   -0.00287   -0.00197
+ 34 Si   -0.00922   -0.00006    0.00118
+ 35 Si   -0.00216   -0.00106   -0.00075
+ 36 Si    0.00341   -0.00080   -0.00013
+ 37 Si    0.00232   -0.00263   -0.00326
+ 38 Si    0.00324   -0.00338    0.00090
+ 39 Si    0.00053   -0.00016   -0.00001
+ 40 Si    0.00224   -0.00117    0.00303
+ 41 Si   -0.00094   -0.00315   -0.00012
+ 42 Si    0.00246    0.00403   -0.00269
+ 43 Si    0.00132   -0.00018   -0.00086
+ 44 Si    0.00748   -0.00083   -0.00092
+ 45 Si    0.00067   -0.00135   -0.00204
+ 46 Si   -0.00009   -0.00918    0.00019
+ 47 Si   -0.00074   -0.00571   -0.00082
+ 48 Si    0.00247    0.00214   -0.00149
+ 49 Si   -0.00054   -0.00023   -0.00304
+ 50 Si    0.00128    0.00032   -0.00932
+ 51 Si   -0.00024   -0.00063   -0.00264
+ 52 Si   -0.00086   -0.00182   -0.00057
+ 53 Si   -0.00117   -0.00085   -0.00035
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+                                                      
+                                                      
+                                                      
+                                                      
+                                             Si       
+                                    Si                
+                                         Si           
+                            Si        Si              
+                                Si                    
+                              Si           Si         
+                     Si Si     Si SSi                 
+                          Si           Si             
+                       Si Si        Si                
+                 Si        Si  Si                     
+               Si           Si           Si           
+                   SSiSi      SiSSi                   
+           Si           Si           Si               
+                     Si  Si        Si                 
+                Si        Si Si                       
+             Si           Si                          
+                 SSi Si     Si Si                     
+         Si           Si                              
+                    Si                                
+              Si        Si                            
+           Si                                         
+                Si                                    
+       Si                                             
+                                                      
+                                                      
+                                                      
+                                                      
+
+Positions:
+   0 Si     0.000000    0.000000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Si     1.357500    1.357500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   2 Si     2.715000    2.715000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   3 Si     4.072500    4.072500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   4 Si     5.430000    5.430000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   5 Si     6.787500    6.787500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   6 Si     2.715000    0.000000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   7 Si     4.072500    1.357500    4.072500    ( 0.0000,  0.0000,  0.0000)
+   8 Si     5.430000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   9 Si     6.787500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  10 Si     8.145000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  11 Si     9.502500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  12 Si     5.430000    0.000000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  13 Si     6.787500    1.357500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  14 Si     8.145000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  15 Si     9.502500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  16 Si    10.860000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  17 Si    12.217500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  18 Si     0.000000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  19 Si     1.357500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  20 Si     2.715000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  21 Si     4.072500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  22 Si     5.430000    8.145000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  23 Si     6.787500    9.502500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  24 Si     2.715000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  25 Si     4.072500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  26 Si     5.430000    5.440000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  27 Si     6.787500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  28 Si     8.145000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  29 Si     9.502500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  30 Si     5.430000    2.715000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  31 Si     6.787500    4.072500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  32 Si     8.145000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  33 Si     9.502500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  34 Si    10.860000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  35 Si    12.217500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  36 Si     0.000000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  37 Si     1.357500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  38 Si     2.715000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  39 Si     4.072500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  40 Si     5.430000   10.860000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  41 Si     6.787500   12.217500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  42 Si     2.715000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  43 Si     4.072500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  44 Si     5.430000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  45 Si     6.787500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  46 Si     8.145000   10.860000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  47 Si     9.502500   12.217500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  48 Si     5.430000    5.430000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  49 Si     6.787500    6.787500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  50 Si     8.145000    8.145000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  51 Si     9.502500    9.502500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  52 Si    10.860000   10.860000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  53 Si    12.217500   12.217500   12.217500    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    0.000000    8.145000    8.145000    52     0.1809
+  2. axis:    yes    8.145000    0.000000    8.145000    52     0.1809
+  3. axis:    yes    8.145000    8.145000    0.000000    52     0.1809
+
+  Lengths:  11.518769  11.518769  11.518769
+  Angles:   60.000000  60.000000  60.000000
+
+Effective grid spacing dv^(1/3) = 0.1973
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 14:30:22  -285.941773        c
+iter:   2 14:30:57  -285.941589        c -3.47
+iter:   3 14:31:32  -285.941211c       c -3.56
+iter:   4 14:32:07  -285.941162c       c -3.70
+iter:   5 14:32:42  -285.941157c       c -4.06c
+
+Converged after 5 iterations.
+
+Dipole moment: (-105.111782, -105.109835, -105.111761) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -425862.589512)
+
+Kinetic:       +382.958151
+Potential:     -333.204532
+External:        +0.000000
+XC:            -335.148484
+Entropy (-ST):   -0.021590
+Local:           -0.535496
+SIC:             +0.000000
+--------------------------
+Free energy:   -285.951952
+Extrapolated:  -285.941157
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0   106      5.30726    1.90674
+  0   107      5.30924    1.90497
+  0   108      6.09322    0.01566
+  0   109      6.09356    0.01561
+
+  1   106      5.06598    1.99128
+  1   107      5.06839    1.99107
+  1   108      6.34808    0.00123
+  1   109      6.34956    0.00122
+
+
+Fermi level: 5.60904
+
+Gap: 0.649 eV
+Transition (v -> c):
+  (s=0, k=0, n=107, [0.00, 0.00, 0.00]) -> (s=0, k=10, n=108, [0.33, 0.00, 0.33])
+Direct/indirect transitions are different
+Direct gap: 0.784 eV
+Transition at: (s=0, k=0, n=107, [0.00, 0.00, 0.00])
+
+Forces in eV/Ang:
+  0 Si   -0.00080    0.00140   -0.00079
+  1 Si    0.00142    0.00274    0.00145
+  2 Si   -0.00025    0.00195    0.00413
+  3 Si   -0.00103   -0.00111    0.00874
+  4 Si    0.00055    0.00154    0.00266
+  5 Si   -0.00318   -0.00325    0.00115
+  6 Si    0.00269    0.00338    0.00270
+  7 Si   -0.00164    0.00686   -0.00168
+  8 Si   -0.00254    0.00340    0.00319
+  9 Si   -0.03457    0.03475    0.02421
+ 10 Si    0.00020   -0.00384   -0.00018
+ 11 Si   -0.00107   -0.00054    0.00167
+ 12 Si    0.00019    0.00160    0.00011
+ 13 Si   -0.00181   -0.00019   -0.00185
+ 14 Si   -0.00296    0.00318    0.00250
+ 15 Si   -0.00164    0.00089    0.00024
+ 16 Si   -0.00157    0.00425    0.00246
+ 17 Si   -0.00230    0.00085   -0.00040
+ 18 Si    0.00410    0.00198   -0.00021
+ 19 Si    0.00863   -0.00112   -0.00108
+ 20 Si    0.00300   -0.00414    0.00298
+ 21 Si   -0.02608    0.02594   -0.02621
+ 22 Si   -0.00225    0.00064   -0.00042
+ 23 Si   -0.00106   -0.00286    0.00228
+ 24 Si    0.00317    0.00335   -0.00261
+ 25 Si    0.02420    0.03461   -0.03456
+ 26 Si    0.00102   -0.15070    0.00083
+ 27 Si    0.02569    0.03580    0.02556
+ 28 Si    0.00234    0.00253    0.01224
+ 29 Si   -0.00074   -0.00231    0.00018
+ 30 Si    0.00257    0.00313   -0.00293
+ 31 Si    0.00029    0.00088   -0.00154
+ 32 Si   -0.00085    0.00588   -0.00087
+ 33 Si   -0.00159    0.00278   -0.00159
+ 34 Si   -0.00764    0.00127   -0.00017
+ 35 Si   -0.00263   -0.00197   -0.00212
+ 36 Si    0.00259    0.00154    0.00048
+ 37 Si    0.00106   -0.00322   -0.00319
+ 38 Si   -0.00047    0.00070   -0.00229
+ 39 Si    0.00229   -0.00287   -0.00108
+ 40 Si    0.00290   -0.00257    0.00283
+ 41 Si    0.00028   -0.00173    0.00024
+ 42 Si   -0.00027   -0.00381    0.00029
+ 43 Si    0.00168   -0.00050   -0.00098
+ 44 Si    0.01229    0.00260    0.00238
+ 45 Si    0.00018   -0.00228   -0.00071
+ 46 Si    0.00148   -0.00786    0.00154
+ 47 Si   -0.00129   -0.00006   -0.00123
+ 48 Si    0.00253    0.00425   -0.00149
+ 49 Si   -0.00040    0.00081   -0.00230
+ 50 Si   -0.00020    0.00130   -0.00761
+ 51 Si   -0.00215   -0.00194   -0.00263
+ 52 Si   -0.00234   -0.00083   -0.00228
+ 53 Si   -0.00103    0.00018   -0.00107
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+                                                      
+                                                      
+                                                      
+                                                      
+                                             Si       
+                                    Si                
+                                         Si           
+                            Si        Si              
+                                Si                    
+                              Si           Si         
+                     Si Si     Si SSi                 
+                          Si           Si             
+                       Si Si        Si                
+                 Si        Si  Si                     
+               Si           Si           Si           
+                   SSiSi      SiSSi                   
+           Si           Si           Si               
+                     Si  Si        Si                 
+                Si        Si Si                       
+             Si           Si                          
+                 SSi Si     Si Si                     
+         Si           Si                              
+                    Si                                
+              Si        Si                            
+           Si                                         
+                Si                                    
+       Si                                             
+                                                      
+                                                      
+                                                      
+                                                      
+
+Positions:
+   0 Si     0.000000    0.000000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Si     1.357500    1.357500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   2 Si     2.715000    2.715000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   3 Si     4.072500    4.072500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   4 Si     5.430000    5.430000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   5 Si     6.787500    6.787500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   6 Si     2.715000    0.000000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   7 Si     4.072500    1.357500    4.072500    ( 0.0000,  0.0000,  0.0000)
+   8 Si     5.430000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   9 Si     6.787500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  10 Si     8.145000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  11 Si     9.502500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  12 Si     5.430000    0.000000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  13 Si     6.787500    1.357500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  14 Si     8.145000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  15 Si     9.502500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  16 Si    10.860000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  17 Si    12.217500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  18 Si     0.000000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  19 Si     1.357500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  20 Si     2.715000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  21 Si     4.072500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  22 Si     5.430000    8.145000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  23 Si     6.787500    9.502500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  24 Si     2.715000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  25 Si     4.072500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  26 Si     5.430000    5.430000    5.420000    ( 0.0000,  0.0000,  0.0000)
+  27 Si     6.787500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  28 Si     8.145000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  29 Si     9.502500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  30 Si     5.430000    2.715000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  31 Si     6.787500    4.072500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  32 Si     8.145000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  33 Si     9.502500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  34 Si    10.860000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  35 Si    12.217500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  36 Si     0.000000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  37 Si     1.357500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  38 Si     2.715000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  39 Si     4.072500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  40 Si     5.430000   10.860000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  41 Si     6.787500   12.217500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  42 Si     2.715000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  43 Si     4.072500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  44 Si     5.430000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  45 Si     6.787500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  46 Si     8.145000   10.860000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  47 Si     9.502500   12.217500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  48 Si     5.430000    5.430000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  49 Si     6.787500    6.787500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  50 Si     8.145000    8.145000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  51 Si     9.502500    9.502500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  52 Si    10.860000   10.860000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  53 Si    12.217500   12.217500   12.217500    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    0.000000    8.145000    8.145000    52     0.1809
+  2. axis:    yes    8.145000    0.000000    8.145000    52     0.1809
+  3. axis:    yes    8.145000    8.145000    0.000000    52     0.1809
+
+  Lengths:  11.518769  11.518769  11.518769
+  Angles:   60.000000  60.000000  60.000000
+
+Effective grid spacing dv^(1/3) = 0.1973
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 14:35:54  -285.941482        c
+iter:   2 14:36:29  -285.941384        c -3.61
+iter:   3 14:37:04  -285.941188c       c -3.70
+iter:   4 14:37:39  -285.941163c       c -3.87
+iter:   5 14:38:14  -285.941161c       c -4.22c
+
+Converged after 5 iterations.
+
+Dipole moment: (-105.111761, -105.112440, -105.113021) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -425862.589512)
+
+Kinetic:       +382.958681
+Potential:     -333.205034
+External:        +0.000000
+XC:            -335.148534
+Entropy (-ST):   -0.021590
+Local:           -0.535479
+SIC:             +0.000000
+--------------------------
+Free energy:   -285.951956
+Extrapolated:  -285.941161
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0   106      5.30721    1.90679
+  0   107      5.30896    1.90522
+  0   108      6.09317    0.01567
+  0   109      6.09353    0.01561
+
+  1   106      5.06627    1.99125
+  1   107      5.06810    1.99109
+  1   108      6.34802    0.00123
+  1   109      6.34950    0.00122
+
+
+Fermi level: 5.60904
+
+Gap: 0.650 eV
+Transition (v -> c):
+  (s=0, k=0, n=107, [0.00, 0.00, 0.00]) -> (s=0, k=12, n=108, [0.33, 0.33, 0.00])
+Direct/indirect transitions are different
+Direct gap: 0.784 eV
+Transition at: (s=0, k=0, n=107, [0.00, 0.00, 0.00])
+
+Forces in eV/Ang:
+  0 Si    0.00220    0.00154    0.00069
+  1 Si    0.00145    0.00065    0.00094
+  2 Si    0.00081    0.00015    0.00158
+  3 Si    0.00051   -0.00011    0.00877
+  4 Si   -0.00013   -0.00050    0.00299
+  5 Si   -0.00295   -0.00357    0.00260
+  6 Si    0.00170    0.00154    0.00020
+  7 Si   -0.00053    0.00934    0.00010
+  8 Si    0.00222   -0.00043   -0.00012
+  9 Si    0.01577   -0.02638   -0.03625
+ 10 Si    0.00039   -0.00221   -0.00031
+ 11 Si   -0.00166   -0.00007    0.00122
+ 12 Si   -0.00015    0.00341   -0.00081
+ 13 Si   -0.00326    0.00233   -0.00263
+ 14 Si   -0.00269    0.00246    0.00403
+ 15 Si   -0.00084    0.00132   -0.00018
+ 16 Si   -0.00148    0.00247    0.00214
+ 17 Si   -0.00306   -0.00054   -0.00023
+ 18 Si    0.00117    0.00207    0.00123
+ 19 Si    0.00811   -0.00091    0.00035
+ 20 Si   -0.00076    0.00071   -0.00070
+ 21 Si   -0.02587    0.01525   -0.03587
+ 22 Si   -0.00070    0.00072   -0.00088
+ 23 Si    0.00031   -0.00043    0.00146
+ 24 Si    0.00062    0.00037    0.00532
+ 25 Si    0.02384    0.02371   -0.04464
+ 26 Si   -0.00054    0.00296    0.14691
+ 27 Si   -0.02473   -0.02486   -0.03507
+ 28 Si    0.00213    0.00189    0.01370
+ 29 Si   -0.00195   -0.00104   -0.00287
+ 30 Si    0.00089    0.00324   -0.00339
+ 31 Si   -0.00001    0.00052   -0.00017
+ 32 Si   -0.00091    0.00748   -0.00083
+ 33 Si   -0.00203    0.00067   -0.00135
+ 34 Si   -0.00932    0.00127    0.00031
+ 35 Si   -0.00265   -0.00024   -0.00063
+ 36 Si    0.00268   -0.00072   -0.00100
+ 37 Si    0.00182   -0.00305   -0.00180
+ 38 Si    0.00220   -0.00243    0.00562
+ 39 Si    0.00111   -0.00035    0.00065
+ 40 Si    0.00303   -0.00075    0.00194
+ 41 Si   -0.00007   -0.00352   -0.00057
+ 42 Si    0.00356    0.00098   -0.00346
+ 43 Si    0.00007    0.00044   -0.00090
+ 44 Si    0.00740   -0.00124   -0.00092
+ 45 Si    0.00018   -0.00153   -0.00177
+ 46 Si    0.00118   -0.00922   -0.00005
+ 47 Si   -0.00074   -0.00216   -0.00105
+ 48 Si    0.00301    0.00225   -0.00117
+ 49 Si   -0.00013   -0.00093   -0.00315
+ 50 Si    0.00019   -0.00009   -0.00918
+ 51 Si   -0.00081   -0.00074   -0.00572
+ 52 Si   -0.00057   -0.00085   -0.00181
+ 53 Si   -0.00036   -0.00116   -0.00085
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+                                                      
+                                                      
+                                                      
+                                                      
+                                             Si       
+                                    Si                
+                                         Si           
+                            Si        Si              
+                                Si                    
+                              Si           Si         
+                     Si Si     Si SSi                 
+                          Si           Si             
+                       Si Si        Si                
+                 Si        Si  Si                     
+               Si           Si           Si           
+                   SSiSi      SiSSi                   
+           Si           Si           Si               
+                     Si  Si        Si                 
+                Si        Si Si                       
+             Si           Si                          
+                 SSi Si     Si Si                     
+         Si           Si                              
+                    Si                                
+              Si        Si                            
+           Si                                         
+                Si                                    
+       Si                                             
+                                                      
+                                                      
+                                                      
+                                                      
+
+Positions:
+   0 Si     0.000000    0.000000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Si     1.357500    1.357500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   2 Si     2.715000    2.715000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   3 Si     4.072500    4.072500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   4 Si     5.430000    5.430000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   5 Si     6.787500    6.787500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   6 Si     2.715000    0.000000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   7 Si     4.072500    1.357500    4.072500    ( 0.0000,  0.0000,  0.0000)
+   8 Si     5.430000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   9 Si     6.787500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  10 Si     8.145000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  11 Si     9.502500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  12 Si     5.430000    0.000000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  13 Si     6.787500    1.357500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  14 Si     8.145000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  15 Si     9.502500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  16 Si    10.860000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  17 Si    12.217500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  18 Si     0.000000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  19 Si     1.357500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  20 Si     2.715000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  21 Si     4.072500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  22 Si     5.430000    8.145000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  23 Si     6.787500    9.502500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  24 Si     2.715000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  25 Si     4.072500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  26 Si     5.430000    5.430000    5.440000    ( 0.0000,  0.0000,  0.0000)
+  27 Si     6.787500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  28 Si     8.145000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  29 Si     9.502500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  30 Si     5.430000    2.715000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  31 Si     6.787500    4.072500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  32 Si     8.145000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  33 Si     9.502500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  34 Si    10.860000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  35 Si    12.217500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  36 Si     0.000000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  37 Si     1.357500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  38 Si     2.715000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  39 Si     4.072500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  40 Si     5.430000   10.860000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  41 Si     6.787500   12.217500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  42 Si     2.715000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  43 Si     4.072500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  44 Si     5.430000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  45 Si     6.787500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  46 Si     8.145000   10.860000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  47 Si     9.502500   12.217500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  48 Si     5.430000    5.430000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  49 Si     6.787500    6.787500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  50 Si     8.145000    8.145000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  51 Si     9.502500    9.502500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  52 Si    10.860000   10.860000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  53 Si    12.217500   12.217500   12.217500    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    0.000000    8.145000    8.145000    52     0.1809
+  2. axis:    yes    8.145000    0.000000    8.145000    52     0.1809
+  3. axis:    yes    8.145000    8.145000    0.000000    52     0.1809
+
+  Lengths:  11.518769  11.518769  11.518769
+  Angles:   60.000000  60.000000  60.000000
+
+Effective grid spacing dv^(1/3) = 0.1973
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 14:41:27  -285.941774        c
+iter:   2 14:42:02  -285.941589        c -3.47
+iter:   3 14:42:37  -285.941211c       c -3.56
+iter:   4 14:43:12  -285.941162c       c -3.70
+iter:   5 14:43:47  -285.941157c       c -4.06c
+
+Converged after 5 iterations.
+
+Dipole moment: (-105.111761, -105.111782, -105.109835) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -425862.589512)
+
+Kinetic:       +382.958151
+Potential:     -333.204532
+External:        +0.000000
+XC:            -335.148484
+Entropy (-ST):   -0.021590
+Local:           -0.535496
+SIC:             +0.000000
+--------------------------
+Free energy:   -285.951952
+Extrapolated:  -285.941157
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0   106      5.30726    1.90674
+  0   107      5.30924    1.90497
+  0   108      6.09322    0.01566
+  0   109      6.09356    0.01561
+
+  1   106      5.06685    1.99120
+  1   107      5.06946    1.99097
+  1   108      6.34864    0.00123
+  1   109      6.34968    0.00121
+
+
+Fermi level: 5.60904
+
+Gap: 0.649 eV
+Transition (v -> c):
+  (s=0, k=0, n=107, [0.00, 0.00, 0.00]) -> (s=0, k=12, n=108, [0.33, 0.33, 0.00])
+Direct/indirect transitions are different
+Direct gap: 0.784 eV
+Transition at: (s=0, k=0, n=107, [0.00, 0.00, 0.00])
+
+Forces in eV/Ang:
+  0 Si   -0.00079   -0.00080    0.00139
+  1 Si    0.00145    0.00142    0.00274
+  2 Si    0.00270    0.00269    0.00338
+  3 Si   -0.00168   -0.00164    0.00686
+  4 Si    0.00012    0.00019    0.00160
+  5 Si   -0.00185   -0.00181   -0.00019
+  6 Si   -0.00021    0.00410    0.00198
+  7 Si   -0.00108    0.00863   -0.00111
+  8 Si   -0.00260    0.00317    0.00335
+  9 Si   -0.03456    0.02420    0.03461
+ 10 Si   -0.00293    0.00257    0.00313
+ 11 Si   -0.00154    0.00029    0.00088
+ 12 Si    0.00049    0.00259    0.00154
+ 13 Si   -0.00319    0.00106   -0.00322
+ 14 Si    0.00029   -0.00027   -0.00381
+ 15 Si   -0.00099    0.00168   -0.00050
+ 16 Si   -0.00149    0.00253    0.00425
+ 17 Si   -0.00230   -0.00040    0.00081
+ 18 Si    0.00413   -0.00025    0.00195
+ 19 Si    0.00873   -0.00103   -0.00111
+ 20 Si    0.00319   -0.00254    0.00340
+ 21 Si    0.02421   -0.03457    0.03474
+ 22 Si    0.00250   -0.00296    0.00318
+ 23 Si    0.00024   -0.00164    0.00089
+ 24 Si    0.00298    0.00300   -0.00414
+ 25 Si   -0.02620   -0.02608    0.02594
+ 26 Si    0.00083    0.00102   -0.15070
+ 27 Si    0.02557    0.02569    0.03580
+ 28 Si   -0.00087   -0.00085    0.00588
+ 29 Si   -0.00159   -0.00159    0.00278
+ 30 Si   -0.00229   -0.00047    0.00070
+ 31 Si   -0.00108    0.00229   -0.00287
+ 32 Si    0.00238    0.01229    0.00260
+ 33 Si   -0.00071    0.00018   -0.00228
+ 34 Si   -0.00761   -0.00020    0.00130
+ 35 Si   -0.00263   -0.00215   -0.00195
+ 36 Si    0.00266    0.00055    0.00154
+ 37 Si    0.00115   -0.00318   -0.00325
+ 38 Si   -0.00019    0.00020   -0.00384
+ 39 Si    0.00168   -0.00107   -0.00054
+ 40 Si    0.00246   -0.00157    0.00425
+ 41 Si   -0.00040   -0.00230    0.00085
+ 42 Si   -0.00043   -0.00225    0.00064
+ 43 Si    0.00228   -0.00106   -0.00286
+ 44 Si    0.01225    0.00234    0.00254
+ 45 Si    0.00018   -0.00074   -0.00231
+ 46 Si   -0.00017   -0.00764    0.00127
+ 47 Si   -0.00212   -0.00263   -0.00197
+ 48 Si    0.00283    0.00290   -0.00257
+ 49 Si    0.00024    0.00028   -0.00173
+ 50 Si    0.00154    0.00148   -0.00786
+ 51 Si   -0.00123   -0.00129   -0.00006
+ 52 Si   -0.00229   -0.00234   -0.00083
+ 53 Si   -0.00107   -0.00103    0.00018
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+                                                      
+                                                      
+                                                      
+                                                      
+                                             Si       
+                                    Si                
+                                         Si           
+                            Si        Si              
+                                Si                    
+                              Si           Si         
+                     Si Si     Si SSi                 
+                          Si           Si             
+                       Si Si        Si                
+                 Si        Si  Si                     
+               Si           Si           Si           
+                   SSiSi      SiSSi                   
+           Si           Si           Si               
+                     Si  Si        Si                 
+                Si        Si Si                       
+             Si           Si                          
+                 SSi Si     Si Si                     
+         Si           Si                              
+                    Si                                
+              Si        Si                            
+           Si                                         
+                Si                                    
+       Si                                             
+                                                      
+                                                      
+                                                      
+                                                      
+
+Positions:
+   0 Si     0.000000    0.000000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Si     1.357500    1.357500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   2 Si     2.715000    2.715000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   3 Si     4.072500    4.072500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   4 Si     5.430000    5.430000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   5 Si     6.787500    6.787500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   6 Si     2.715000    0.000000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   7 Si     4.072500    1.357500    4.072500    ( 0.0000,  0.0000,  0.0000)
+   8 Si     5.430000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   9 Si     6.787500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  10 Si     8.145000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  11 Si     9.502500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  12 Si     5.430000    0.000000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  13 Si     6.787500    1.357500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  14 Si     8.145000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  15 Si     9.502500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  16 Si    10.860000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  17 Si    12.217500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  18 Si     0.000000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  19 Si     1.357500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  20 Si     2.715000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  21 Si     4.072500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  22 Si     5.430000    8.145000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  23 Si     6.787500    9.502500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  24 Si     2.715000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  25 Si     4.072500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  26 Si     5.430000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  27 Si     6.777500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  28 Si     8.145000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  29 Si     9.502500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  30 Si     5.430000    2.715000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  31 Si     6.787500    4.072500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  32 Si     8.145000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  33 Si     9.502500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  34 Si    10.860000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  35 Si    12.217500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  36 Si     0.000000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  37 Si     1.357500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  38 Si     2.715000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  39 Si     4.072500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  40 Si     5.430000   10.860000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  41 Si     6.787500   12.217500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  42 Si     2.715000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  43 Si     4.072500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  44 Si     5.430000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  45 Si     6.787500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  46 Si     8.145000   10.860000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  47 Si     9.502500   12.217500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  48 Si     5.430000    5.430000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  49 Si     6.787500    6.787500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  50 Si     8.145000    8.145000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  51 Si     9.502500    9.502500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  52 Si    10.860000   10.860000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  53 Si    12.217500   12.217500   12.217500    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    0.000000    8.145000    8.145000    52     0.1809
+  2. axis:    yes    8.145000    0.000000    8.145000    52     0.1809
+  3. axis:    yes    8.145000    8.145000    0.000000    52     0.1809
+
+  Lengths:  11.518769  11.518769  11.518769
+  Angles:   60.000000  60.000000  60.000000
+
+Effective grid spacing dv^(1/3) = 0.1973
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 14:47:01  -285.941457        c
+iter:   2 15:05:35  -285.941364        c -3.55
+iter:   3 15:06:11  -285.941182c       c -3.64
+iter:   4 15:06:47  -285.941159c       c -3.82
+iter:   5 15:07:23  -285.941156c       c -4.19c
+
+Converged after 5 iterations.
+
+Dipole moment: (-105.112457, -105.111747, -105.112428) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -425862.589512)
+
+Kinetic:       +382.958063
+Potential:     -333.204388
+External:        +0.000000
+XC:            -335.148485
+Entropy (-ST):   -0.021590
+Local:           -0.535551
+SIC:             +0.000000
+--------------------------
+Free energy:   -285.951951
+Extrapolated:  -285.941156
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0   106      5.30726    1.90674
+  0   107      5.30925    1.90496
+  0   108      6.09323    0.01566
+  0   109      6.09356    0.01561
+
+  1   106      5.06597    1.99128
+  1   107      5.06840    1.99107
+  1   108      6.34809    0.00123
+  1   109      6.34955    0.00122
+
+
+Fermi level: 5.60904
+
+Gap: 0.649 eV
+Transition (v -> c):
+  (s=0, k=0, n=107, [0.00, 0.00, 0.00]) -> (s=0, k=4, n=108, [0.00, 0.33, 0.33])
+Direct/indirect transitions are different
+Direct gap: 0.784 eV
+Transition at: (s=0, k=0, n=107, [0.00, 0.00, 0.00])
+
+Forces in eV/Ang:
+  0 Si    0.00096    0.00153    0.00074
+  1 Si    0.00084    0.00221    0.00130
+  2 Si    0.00086    0.00125    0.00245
+  3 Si   -0.00094    0.00041    0.00865
+  4 Si   -0.00028    0.00028    0.00317
+  5 Si   -0.00413   -0.00292    0.00246
+  6 Si    0.00207    0.00203    0.00166
+  7 Si   -0.00072    0.00730    0.00000
+  8 Si   -0.00247    0.00188    0.00168
+  9 Si   -0.00448    0.00002   -0.00020
+ 10 Si   -0.00110   -0.00065    0.00139
+ 11 Si   -0.00263   -0.00235    0.00309
+ 12 Si   -0.00052    0.00245   -0.00036
+ 13 Si   -0.00321    0.00189   -0.00263
+ 14 Si   -0.00109    0.00158   -0.00035
+ 15 Si   -0.00340    0.00258   -0.00183
+ 16 Si   -0.00062    0.00234    0.00148
+ 17 Si   -0.00255    0.00007   -0.00080
+ 18 Si   -0.00111    0.00188    0.00108
+ 19 Si    0.00743   -0.00086   -0.00150
+ 20 Si    0.00207    0.00068    0.00110
+ 21 Si   -0.00294   -0.01100   -0.00329
+ 22 Si   -0.00024   -0.00148    0.00142
+ 23 Si    0.00415    0.00031    0.00003
+ 24 Si    0.00143    0.00065   -0.00073
+ 25 Si   -0.00199   -0.00213   -0.01216
+ 26 Si   -0.03592   -0.02584   -0.02191
+ 27 Si    0.14760   -0.00130   -0.00150
+ 28 Si   -0.03440   -0.02401    0.03428
+ 29 Si   -0.00330   -0.00342    0.00223
+ 30 Si    0.00146    0.00097   -0.00103
+ 31 Si    0.00507   -0.00025    0.00088
+ 32 Si   -0.03439    0.03398   -0.02421
+ 33 Si   -0.00379    0.00183   -0.00293
+ 34 Si   -0.00789    0.00164    0.00125
+ 35 Si   -0.00322   -0.00179   -0.00178
+ 36 Si    0.00229   -0.00038   -0.00078
+ 37 Si    0.00218   -0.00226   -0.00289
+ 38 Si    0.00241   -0.00229    0.00024
+ 39 Si   -0.00109    0.00028    0.00148
+ 40 Si    0.00358   -0.00147    0.00207
+ 41 Si   -0.00088   -0.00286   -0.00107
+ 42 Si    0.00177    0.00165   -0.00184
+ 43 Si   -0.00086    0.00189    0.00162
+ 44 Si   -0.02677    0.02667    0.02647
+ 45 Si    0.00504   -0.00320   -0.00222
+ 46 Si    0.00143   -0.00868    0.00044
+ 47 Si   -0.00133   -0.00370    0.00031
+ 48 Si    0.00334    0.00271   -0.00075
+ 49 Si   -0.00125   -0.00057   -0.00336
+ 50 Si    0.00094    0.00033   -0.00858
+ 51 Si   -0.00182   -0.00018   -0.00331
+ 52 Si   -0.00181   -0.00120   -0.00159
+ 53 Si   -0.00108    0.00053   -0.00034
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+                                                      
+                                                      
+                                                      
+                                                      
+                                             Si       
+                                    Si                
+                                         Si           
+                            Si        Si              
+                                Si                    
+                              Si           Si         
+                     Si Si     Si SSi                 
+                          Si           Si             
+                       Si Si        Si                
+                 Si        Si  Si                     
+               Si           Si           Si           
+                   SSiSi      SiSSi                   
+           Si           Si           Si               
+                     Si  Si        Si                 
+                Si        Si Si                       
+             Si           Si                          
+                 SSi Si     Si Si                     
+         Si           Si                              
+                    Si                                
+              Si        Si                            
+           Si                                         
+                Si                                    
+       Si                                             
+                                                      
+                                                      
+                                                      
+                                                      
+
+Positions:
+   0 Si     0.000000    0.000000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Si     1.357500    1.357500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   2 Si     2.715000    2.715000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   3 Si     4.072500    4.072500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   4 Si     5.430000    5.430000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   5 Si     6.787500    6.787500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   6 Si     2.715000    0.000000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   7 Si     4.072500    1.357500    4.072500    ( 0.0000,  0.0000,  0.0000)
+   8 Si     5.430000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   9 Si     6.787500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  10 Si     8.145000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  11 Si     9.502500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  12 Si     5.430000    0.000000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  13 Si     6.787500    1.357500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  14 Si     8.145000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  15 Si     9.502500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  16 Si    10.860000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  17 Si    12.217500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  18 Si     0.000000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  19 Si     1.357500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  20 Si     2.715000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  21 Si     4.072500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  22 Si     5.430000    8.145000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  23 Si     6.787500    9.502500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  24 Si     2.715000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  25 Si     4.072500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  26 Si     5.430000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  27 Si     6.797500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  28 Si     8.145000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  29 Si     9.502500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  30 Si     5.430000    2.715000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  31 Si     6.787500    4.072500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  32 Si     8.145000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  33 Si     9.502500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  34 Si    10.860000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  35 Si    12.217500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  36 Si     0.000000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  37 Si     1.357500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  38 Si     2.715000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  39 Si     4.072500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  40 Si     5.430000   10.860000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  41 Si     6.787500   12.217500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  42 Si     2.715000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  43 Si     4.072500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  44 Si     5.430000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  45 Si     6.787500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  46 Si     8.145000   10.860000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  47 Si     9.502500   12.217500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  48 Si     5.430000    5.430000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  49 Si     6.787500    6.787500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  50 Si     8.145000    8.145000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  51 Si     9.502500    9.502500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  52 Si    10.860000   10.860000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  53 Si    12.217500   12.217500   12.217500    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    0.000000    8.145000    8.145000    52     0.1809
+  2. axis:    yes    8.145000    0.000000    8.145000    52     0.1809
+  3. axis:    yes    8.145000    8.145000    0.000000    52     0.1809
+
+  Lengths:  11.518769  11.518769  11.518769
+  Angles:   60.000000  60.000000  60.000000
+
+Effective grid spacing dv^(1/3) = 0.1973
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 15:10:35  -285.941777        c
+iter:   2 15:11:11  -285.941592        c -3.47
+iter:   3 15:11:46  -285.941216c       c -3.56
+iter:   4 15:12:21  -285.941166c       c -3.70
+iter:   5 15:12:57  -285.941161c       c -4.06c
+
+Converged after 5 iterations.
+
+Dipole moment: (-105.111307, -105.111727, -105.111752) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -425862.589512)
+
+Kinetic:       +382.958671
+Potential:     -333.205083
+External:        +0.000000
+XC:            -335.148529
+Entropy (-ST):   -0.021590
+Local:           -0.535425
+SIC:             +0.000000
+--------------------------
+Free energy:   -285.951956
+Extrapolated:  -285.941161
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0   106      5.30721    1.90679
+  0   107      5.30895    1.90523
+  0   108      6.09316    0.01567
+  0   109      6.09354    0.01561
+
+  1   106      5.06713    1.99118
+  1   107      5.06919    1.99099
+  1   108      6.34851    0.00123
+  1   109      6.34976    0.00121
+
+
+Fermi level: 5.60904
+
+Gap: 0.650 eV
+Transition (v -> c):
+  (s=0, k=0, n=107, [0.00, 0.00, 0.00]) -> (s=0, k=10, n=108, [0.33, 0.00, 0.33])
+Direct/indirect transitions are different
+Direct gap: 0.784 eV
+Transition at: (s=0, k=0, n=107, [0.00, 0.00, 0.00])
+
+Forces in eV/Ang:
+  0 Si    0.00161    0.00037    0.00036
+  1 Si    0.00205    0.00061    0.00058
+  2 Si    0.00055    0.00042    0.00263
+  3 Si   -0.00011   -0.00155    0.00918
+  4 Si    0.00098   -0.00027    0.00295
+  5 Si   -0.00138   -0.00317    0.00141
+  6 Si    0.00053    0.00266    0.00039
+  7 Si   -0.00010    0.00928   -0.00150
+  8 Si    0.00239    0.00149    0.00151
+  9 Si   -0.01366   -0.00229   -0.00216
+ 10 Si   -0.00162    0.00050    0.00094
+ 11 Si    0.00064    0.00232   -0.00040
+ 12 Si    0.00097    0.00303   -0.00020
+ 13 Si   -0.00141    0.00150   -0.00317
+ 14 Si   -0.00169    0.00098    0.00054
+ 15 Si    0.00066   -0.00041    0.00234
+ 16 Si   -0.00309    0.00383    0.00390
+ 17 Si   -0.00375   -0.00012   -0.00008
+ 18 Si    0.00527    0.00124    0.00123
+ 19 Si    0.00904    0.00014    0.00018
+ 20 Si    0.00077   -0.00019    0.00235
+ 21 Si    0.00107   -0.00731    0.00100
+ 22 Si   -0.00028   -0.00083    0.00151
+ 23 Si   -0.00406   -0.00274    0.00277
+ 24 Si    0.00082    0.00238   -0.00013
+ 25 Si    0.00122    0.00102   -0.00733
+ 26 Si    0.03520    0.02463    0.02485
+ 27 Si   -0.15014    0.00045    0.00059
+ 28 Si    0.03641    0.02618   -0.01563
+ 29 Si    0.00037    0.00015   -0.00224
+ 30 Si   -0.00031    0.00160   -0.00093
+ 31 Si   -0.00409    0.00277   -0.00283
+ 32 Si    0.03634   -0.01566    0.02614
+ 33 Si    0.00033   -0.00224    0.00012
+ 34 Si   -0.01004   -0.00028   -0.00035
+ 35 Si   -0.00194    0.00026    0.00020
+ 36 Si    0.00358    0.00041    0.00048
+ 37 Si    0.00043   -0.00284   -0.00280
+ 38 Si   -0.00034   -0.00028   -0.00083
+ 39 Si    0.00313   -0.00290   -0.00249
+ 40 Si    0.00242   -0.00174    0.00252
+ 41 Si    0.00131   -0.00267    0.00028
+ 42 Si   -0.00029   -0.00089   -0.00031
+ 43 Si    0.00314   -0.00254   -0.00301
+ 44 Si    0.04519   -0.02418   -0.02416
+ 45 Si   -0.00376   -0.00008   -0.00006
+ 46 Si    0.00030   -0.00816    0.00026
+ 47 Si   -0.00049   -0.00119   -0.00274
+ 48 Si    0.00242    0.00245   -0.00182
+ 49 Si    0.00135    0.00029   -0.00268
+ 50 Si    0.00026    0.00029   -0.00819
+ 51 Si   -0.00052   -0.00272   -0.00118
+ 52 Si   -0.00015   -0.00144   -0.00151
+ 53 Si   -0.00001   -0.00220   -0.00217
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+                                                      
+                                                      
+                                                      
+                                                      
+                                             Si       
+                                    Si                
+                                         Si           
+                            Si        Si              
+                                Si                    
+                              Si           Si         
+                     Si Si     Si SSi                 
+                          Si           Si             
+                       Si Si        Si                
+                 Si        Si  Si                     
+               Si           Si           Si           
+                   SSiSi      SiSSi                   
+           Si           Si           Si               
+                     Si  Si        Si                 
+                Si        Si Si                       
+             Si           Si                          
+                 SSi Si     Si Si                     
+         Si           Si                              
+                    Si                                
+              Si        Si                            
+           Si                                         
+                Si                                    
+       Si                                             
+                                                      
+                                                      
+                                                      
+                                                      
+
+Positions:
+   0 Si     0.000000    0.000000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Si     1.357500    1.357500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   2 Si     2.715000    2.715000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   3 Si     4.072500    4.072500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   4 Si     5.430000    5.430000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   5 Si     6.787500    6.787500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   6 Si     2.715000    0.000000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   7 Si     4.072500    1.357500    4.072500    ( 0.0000,  0.0000,  0.0000)
+   8 Si     5.430000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   9 Si     6.787500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  10 Si     8.145000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  11 Si     9.502500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  12 Si     5.430000    0.000000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  13 Si     6.787500    1.357500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  14 Si     8.145000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  15 Si     9.502500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  16 Si    10.860000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  17 Si    12.217500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  18 Si     0.000000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  19 Si     1.357500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  20 Si     2.715000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  21 Si     4.072500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  22 Si     5.430000    8.145000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  23 Si     6.787500    9.502500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  24 Si     2.715000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  25 Si     4.072500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  26 Si     5.430000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  27 Si     6.787500    6.777500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  28 Si     8.145000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  29 Si     9.502500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  30 Si     5.430000    2.715000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  31 Si     6.787500    4.072500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  32 Si     8.145000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  33 Si     9.502500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  34 Si    10.860000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  35 Si    12.217500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  36 Si     0.000000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  37 Si     1.357500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  38 Si     2.715000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  39 Si     4.072500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  40 Si     5.430000   10.860000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  41 Si     6.787500   12.217500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  42 Si     2.715000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  43 Si     4.072500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  44 Si     5.430000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  45 Si     6.787500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  46 Si     8.145000   10.860000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  47 Si     9.502500   12.217500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  48 Si     5.430000    5.430000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  49 Si     6.787500    6.787500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  50 Si     8.145000    8.145000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  51 Si     9.502500    9.502500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  52 Si    10.860000   10.860000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  53 Si    12.217500   12.217500   12.217500    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    0.000000    8.145000    8.145000    52     0.1809
+  2. axis:    yes    8.145000    0.000000    8.145000    52     0.1809
+  3. axis:    yes    8.145000    8.145000    0.000000    52     0.1809
+
+  Lengths:  11.518769  11.518769  11.518769
+  Angles:   60.000000  60.000000  60.000000
+
+Effective grid spacing dv^(1/3) = 0.1973
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 15:16:09  -285.941477        c
+iter:   2 15:16:44  -285.941379        c -3.61
+iter:   3 15:17:19  -285.941184c       c -3.70
+iter:   4 15:17:54  -285.941159c       c -3.87
+iter:   5 15:18:30  -285.941156c       c -4.22c
+
+Converged after 5 iterations.
+
+Dipole moment: (-105.111604, -105.112414, -105.111746) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -425862.589512)
+
+Kinetic:       +382.958160
+Potential:     -333.204481
+External:        +0.000000
+XC:            -335.148489
+Entropy (-ST):   -0.021590
+Local:           -0.535551
+SIC:             +0.000000
+--------------------------
+Free energy:   -285.951951
+Extrapolated:  -285.941156
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0   106      5.30726    1.90674
+  0   107      5.30924    1.90497
+  0   108      6.09323    0.01566
+  0   109      6.09356    0.01561
+
+  1   106      5.06598    1.99128
+  1   107      5.06840    1.99106
+  1   108      6.34809    0.00123
+  1   109      6.34955    0.00122
+
+
+Fermi level: 5.60904
+
+Gap: 0.649 eV
+Transition (v -> c):
+  (s=0, k=0, n=107, [0.00, 0.00, 0.00]) -> (s=0, k=10, n=108, [0.33, 0.00, 0.33])
+Direct/indirect transitions are different
+Direct gap: 0.784 eV
+Transition at: (s=0, k=0, n=107, [0.00, 0.00, 0.00])
+
+Forces in eV/Ang:
+  0 Si    0.00025    0.00056    0.00107
+  1 Si    0.00205    0.00109    0.00234
+  2 Si    0.00227    0.00188    0.00264
+  3 Si   -0.00009   -0.00105    0.00757
+  4 Si   -0.00036   -0.00005    0.00228
+  5 Si   -0.00318   -0.00351    0.00148
+  6 Si    0.00177   -0.00042    0.00169
+  7 Si   -0.00147    0.00769   -0.00119
+  8 Si    0.00031    0.00175    0.00106
+  9 Si   -0.01213   -0.00224   -0.00233
+ 10 Si   -0.00122    0.00006    0.00168
+ 11 Si   -0.00008    0.00379   -0.00015
+ 12 Si   -0.00077    0.00216    0.00005
+ 13 Si   -0.00341    0.00179   -0.00262
+ 14 Si   -0.00201    0.00237    0.00021
+ 15 Si    0.00072   -0.00088    0.00069
+ 16 Si   -0.00061    0.00304    0.00240
+ 17 Si   -0.00192   -0.00100   -0.00035
+ 18 Si    0.00312    0.00146    0.00177
+ 19 Si    0.00765   -0.00143   -0.00019
+ 20 Si    0.00206   -0.00324    0.00113
+ 21 Si    0.00052   -0.00589    0.00075
+ 22 Si    0.00016   -0.00133    0.00087
+ 23 Si   -0.00242   -0.00280    0.00289
+ 24 Si    0.00156    0.00133   -0.00019
+ 25 Si   -0.00265   -0.00234   -0.01221
+ 26 Si   -0.02582   -0.03572   -0.02573
+ 27 Si    0.00266    0.14755   -0.00082
+ 28 Si   -0.02436   -0.03454    0.03472
+ 29 Si   -0.00351   -0.00319    0.00257
+ 30 Si    0.00067    0.00162   -0.00246
+ 31 Si    0.00077   -0.00097    0.00107
+ 32 Si    0.02573   -0.02535    0.02585
+ 33 Si   -0.00274    0.00569   -0.00249
+ 34 Si   -0.00755    0.00145    0.00083
+ 35 Si   -0.00374   -0.00231   -0.00079
+ 36 Si    0.00179   -0.00040    0.00011
+ 37 Si    0.00221   -0.00372   -0.00260
+ 38 Si    0.00212   -0.00108    0.00053
+ 39 Si    0.00324   -0.00339   -0.00091
+ 40 Si    0.00210   -0.00033    0.00271
+ 41 Si   -0.00070   -0.00234   -0.00033
+ 42 Si    0.00217    0.00089   -0.00142
+ 43 Si    0.00010    0.00538   -0.00032
+ 44 Si    0.03424   -0.03416   -0.02387
+ 45 Si    0.00105   -0.00376   -0.00384
+ 46 Si    0.00124   -0.00812    0.00187
+ 47 Si   -0.00235   -0.00369   -0.00168
+ 48 Si    0.00261    0.00386   -0.00110
+ 49 Si   -0.00093   -0.00122   -0.00266
+ 50 Si    0.00046    0.00170   -0.00880
+ 51 Si   -0.00042   -0.00127   -0.00413
+ 52 Si   -0.00226   -0.00196   -0.00145
+ 53 Si    0.00014   -0.00070    0.00079
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+                                                      
+                                                      
+                                                      
+                                                      
+                                             Si       
+                                    Si                
+                                         Si           
+                            Si        Si              
+                                Si                    
+                              Si           Si         
+                     Si Si     Si SSi                 
+                          Si           Si             
+                       Si Si        Si                
+                 Si        Si  Si                     
+               Si           Si           Si           
+                   SSiSi      SiSSi                   
+           Si           Si           Si               
+                     Si  Si        Si                 
+                Si        Si Si                       
+             Si           Si                          
+                 SSi Si     Si Si                     
+         Si           Si                              
+                    Si                                
+              Si        Si                            
+           Si                                         
+                Si                                    
+       Si                                             
+                                                      
+                                                      
+                                                      
+                                                      
+
+Positions:
+   0 Si     0.000000    0.000000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Si     1.357500    1.357500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   2 Si     2.715000    2.715000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   3 Si     4.072500    4.072500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   4 Si     5.430000    5.430000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   5 Si     6.787500    6.787500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   6 Si     2.715000    0.000000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   7 Si     4.072500    1.357500    4.072500    ( 0.0000,  0.0000,  0.0000)
+   8 Si     5.430000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   9 Si     6.787500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  10 Si     8.145000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  11 Si     9.502500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  12 Si     5.430000    0.000000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  13 Si     6.787500    1.357500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  14 Si     8.145000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  15 Si     9.502500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  16 Si    10.860000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  17 Si    12.217500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  18 Si     0.000000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  19 Si     1.357500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  20 Si     2.715000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  21 Si     4.072500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  22 Si     5.430000    8.145000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  23 Si     6.787500    9.502500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  24 Si     2.715000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  25 Si     4.072500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  26 Si     5.430000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  27 Si     6.787500    6.797500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  28 Si     8.145000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  29 Si     9.502500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  30 Si     5.430000    2.715000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  31 Si     6.787500    4.072500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  32 Si     8.145000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  33 Si     9.502500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  34 Si    10.860000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  35 Si    12.217500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  36 Si     0.000000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  37 Si     1.357500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  38 Si     2.715000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  39 Si     4.072500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  40 Si     5.430000   10.860000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  41 Si     6.787500   12.217500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  42 Si     2.715000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  43 Si     4.072500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  44 Si     5.430000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  45 Si     6.787500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  46 Si     8.145000   10.860000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  47 Si     9.502500   12.217500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  48 Si     5.430000    5.430000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  49 Si     6.787500    6.787500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  50 Si     8.145000    8.145000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  51 Si     9.502500    9.502500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  52 Si    10.860000   10.860000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  53 Si    12.217500   12.217500   12.217500    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    0.000000    8.145000    8.145000    52     0.1809
+  2. axis:    yes    8.145000    0.000000    8.145000    52     0.1809
+  3. axis:    yes    8.145000    8.145000    0.000000    52     0.1809
+
+  Lengths:  11.518769  11.518769  11.518769
+  Angles:   60.000000  60.000000  60.000000
+
+Effective grid spacing dv^(1/3) = 0.1973
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 15:21:42  -285.941779        c
+iter:   2 15:22:17  -285.941594        c -3.47
+iter:   3 15:22:52  -285.941216c       c -3.56
+iter:   4 15:23:28  -285.941166c       c -3.70
+iter:   5 15:24:03  -285.941161c       c -4.06c
+
+Converged after 5 iterations.
+
+Dipole moment: (-105.111757, -105.111307, -105.111727) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -425862.589512)
+
+Kinetic:       +382.958670
+Potential:     -333.205083
+External:        +0.000000
+XC:            -335.148529
+Entropy (-ST):   -0.021590
+Local:           -0.535425
+SIC:             +0.000000
+--------------------------
+Free energy:   -285.951956
+Extrapolated:  -285.941161
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0   106      5.30721    1.90679
+  0   107      5.30895    1.90523
+  0   108      6.09316    0.01567
+  0   109      6.09354    0.01561
+
+  1   106      5.06713    1.99118
+  1   107      5.06919    1.99099
+  1   108      6.34851    0.00123
+  1   109      6.34976    0.00121
+
+
+Fermi level: 5.60904
+
+Gap: 0.650 eV
+Transition (v -> c):
+  (s=0, k=0, n=107, [0.00, 0.00, 0.00]) -> (s=0, k=4, n=108, [0.00, 0.33, 0.33])
+Direct/indirect transitions are different
+Direct gap: 0.784 eV
+Transition at: (s=0, k=0, n=107, [0.00, 0.00, 0.00])
+
+Forces in eV/Ang:
+  0 Si    0.00040    0.00161    0.00037
+  1 Si    0.00057    0.00207    0.00062
+  2 Si    0.00037    0.00057    0.00265
+  3 Si   -0.00157   -0.00007    0.00926
+  4 Si   -0.00025    0.00096    0.00304
+  5 Si   -0.00313   -0.00140    0.00151
+  6 Si    0.00123    0.00525    0.00128
+  7 Si    0.00011    0.00902    0.00017
+  8 Si   -0.00018    0.00082    0.00239
+  9 Si   -0.00733    0.00116    0.00095
+ 10 Si   -0.00086   -0.00028    0.00154
+ 11 Si   -0.00277   -0.00404    0.00280
+ 12 Si    0.00043    0.00360    0.00039
+ 13 Si   -0.00276    0.00044   -0.00282
+ 14 Si   -0.00025   -0.00036   -0.00086
+ 15 Si   -0.00294    0.00317   -0.00250
+ 16 Si   -0.00184    0.00244    0.00247
+ 17 Si   -0.00277    0.00133    0.00027
+ 18 Si    0.00265    0.00054    0.00040
+ 19 Si    0.00923   -0.00010   -0.00154
+ 20 Si    0.00152    0.00240    0.00152
+ 21 Si   -0.00225   -0.01371   -0.00227
+ 22 Si    0.00052   -0.00166    0.00098
+ 23 Si    0.00236    0.00066   -0.00043
+ 24 Si    0.00236    0.00079   -0.00018
+ 25 Si    0.00091    0.00109   -0.00737
+ 26 Si    0.02467    0.03512    0.02455
+ 27 Si    0.00072   -0.15005    0.00053
+ 28 Si    0.02622    0.03633   -0.01560
+ 29 Si    0.00012    0.00032   -0.00226
+ 30 Si   -0.00085   -0.00034   -0.00026
+ 31 Si   -0.00246    0.00311   -0.00290
+ 32 Si   -0.02406    0.04523   -0.02418
+ 33 Si   -0.00007   -0.00377   -0.00009
+ 34 Si   -0.00824    0.00026    0.00028
+ 35 Si   -0.00121   -0.00051   -0.00270
+ 36 Si    0.00305    0.00100   -0.00025
+ 37 Si    0.00143   -0.00140   -0.00320
+ 38 Si    0.00088   -0.00166    0.00047
+ 39 Si   -0.00046    0.00071    0.00229
+ 40 Si    0.00385   -0.00310    0.00381
+ 41 Si   -0.00003   -0.00377   -0.00010
+ 42 Si    0.00145   -0.00032   -0.00087
+ 43 Si    0.00271   -0.00407   -0.00268
+ 44 Si   -0.01562    0.03646    0.02624
+ 45 Si   -0.00219    0.00036    0.00014
+ 46 Si   -0.00027   -0.01002   -0.00032
+ 47 Si    0.00021   -0.00192    0.00021
+ 48 Si    0.00248    0.00240   -0.00175
+ 49 Si    0.00034    0.00133   -0.00269
+ 50 Si    0.00034    0.00026   -0.00813
+ 51 Si   -0.00274   -0.00054   -0.00117
+ 52 Si   -0.00149   -0.00017   -0.00146
+ 53 Si   -0.00220    0.00000   -0.00219
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+                                                      
+                                                      
+                                                      
+                                                      
+                                             Si       
+                                    Si                
+                                         Si           
+                            Si        Si              
+                                Si                    
+                              Si           Si         
+                     Si Si     Si SSi                 
+                          Si           Si             
+                       Si Si        Si                
+                 Si        Si  Si                     
+               Si           Si           Si           
+                   SSiSi      SiSSi                   
+           Si           Si           Si               
+                     Si  Si        Si                 
+                Si        Si Si                       
+             Si           Si                          
+                 SSi Si     Si Si                     
+         Si           Si                              
+                    Si                                
+              Si        Si                            
+           Si                                         
+                Si                                    
+       Si                                             
+                                                      
+                                                      
+                                                      
+                                                      
+
+Positions:
+   0 Si     0.000000    0.000000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Si     1.357500    1.357500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   2 Si     2.715000    2.715000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   3 Si     4.072500    4.072500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   4 Si     5.430000    5.430000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   5 Si     6.787500    6.787500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   6 Si     2.715000    0.000000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   7 Si     4.072500    1.357500    4.072500    ( 0.0000,  0.0000,  0.0000)
+   8 Si     5.430000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   9 Si     6.787500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  10 Si     8.145000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  11 Si     9.502500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  12 Si     5.430000    0.000000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  13 Si     6.787500    1.357500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  14 Si     8.145000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  15 Si     9.502500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  16 Si    10.860000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  17 Si    12.217500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  18 Si     0.000000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  19 Si     1.357500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  20 Si     2.715000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  21 Si     4.072500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  22 Si     5.430000    8.145000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  23 Si     6.787500    9.502500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  24 Si     2.715000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  25 Si     4.072500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  26 Si     5.430000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  27 Si     6.787500    6.787500    6.777500    ( 0.0000,  0.0000,  0.0000)
+  28 Si     8.145000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  29 Si     9.502500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  30 Si     5.430000    2.715000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  31 Si     6.787500    4.072500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  32 Si     8.145000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  33 Si     9.502500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  34 Si    10.860000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  35 Si    12.217500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  36 Si     0.000000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  37 Si     1.357500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  38 Si     2.715000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  39 Si     4.072500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  40 Si     5.430000   10.860000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  41 Si     6.787500   12.217500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  42 Si     2.715000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  43 Si     4.072500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  44 Si     5.430000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  45 Si     6.787500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  46 Si     8.145000   10.860000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  47 Si     9.502500   12.217500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  48 Si     5.430000    5.430000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  49 Si     6.787500    6.787500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  50 Si     8.145000    8.145000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  51 Si     9.502500    9.502500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  52 Si    10.860000   10.860000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  53 Si    12.217500   12.217500   12.217500    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    0.000000    8.145000    8.145000    52     0.1809
+  2. axis:    yes    8.145000    0.000000    8.145000    52     0.1809
+  3. axis:    yes    8.145000    8.145000    0.000000    52     0.1809
+
+  Lengths:  11.518769  11.518769  11.518769
+  Angles:   60.000000  60.000000  60.000000
+
+Effective grid spacing dv^(1/3) = 0.1973
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 15:27:15  -285.941477        c
+iter:   2 15:27:51  -285.941380        c -3.61
+iter:   3 15:28:26  -285.941184c       c -3.70
+iter:   4 15:29:01  -285.941159c       c -3.87
+iter:   5 15:29:37  -285.941156c       c -4.22c
+
+Converged after 5 iterations.
+
+Dipole moment: (-105.111750, -105.111604, -105.112416) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -425862.589512)
+
+Kinetic:       +382.958160
+Potential:     -333.204481
+External:        +0.000000
+XC:            -335.148489
+Entropy (-ST):   -0.021590
+Local:           -0.535551
+SIC:             +0.000000
+--------------------------
+Free energy:   -285.951951
+Extrapolated:  -285.941156
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0   106      5.30726    1.90674
+  0   107      5.30924    1.90497
+  0   108      6.09323    0.01566
+  0   109      6.09356    0.01561
+
+  1   106      5.06685    1.99120
+  1   107      5.06946    1.99097
+  1   108      6.34865    0.00123
+  1   109      6.34968    0.00121
+
+
+Fermi level: 5.60904
+
+Gap: 0.649 eV
+Transition (v -> c):
+  (s=0, k=0, n=107, [0.00, 0.00, 0.00]) -> (s=0, k=12, n=108, [0.33, 0.33, 0.00])
+Direct/indirect transitions are different
+Direct gap: 0.784 eV
+Transition at: (s=0, k=0, n=107, [0.00, 0.00, 0.00])
+
+Forces in eV/Ang:
+  0 Si    0.00105    0.00024    0.00055
+  1 Si    0.00234    0.00205    0.00109
+  2 Si    0.00170    0.00177   -0.00041
+  3 Si   -0.00118   -0.00147    0.00769
+  4 Si    0.00006   -0.00075    0.00215
+  5 Si   -0.00263   -0.00341    0.00179
+  6 Si    0.00177    0.00313    0.00146
+  7 Si   -0.00018    0.00765   -0.00143
+  8 Si   -0.00018    0.00156    0.00133
+  9 Si   -0.01221   -0.00266   -0.00234
+ 10 Si   -0.00247    0.00067    0.00162
+ 11 Si    0.00107    0.00077   -0.00097
+ 12 Si    0.00011    0.00179   -0.00038
+ 13 Si   -0.00261    0.00220   -0.00372
+ 14 Si   -0.00143    0.00217    0.00088
+ 15 Si   -0.00032    0.00010    0.00539
+ 16 Si   -0.00109    0.00261    0.00387
+ 17 Si   -0.00264   -0.00093   -0.00121
+ 18 Si    0.00263    0.00227    0.00188
+ 19 Si    0.00756   -0.00010   -0.00106
+ 20 Si    0.00106    0.00031    0.00175
+ 21 Si   -0.00232   -0.01213   -0.00225
+ 22 Si    0.00021   -0.00201    0.00236
+ 23 Si    0.00069    0.00073   -0.00088
+ 24 Si    0.00114    0.00206   -0.00324
+ 25 Si    0.00076    0.00052   -0.00589
+ 26 Si   -0.02573   -0.02582   -0.03572
+ 27 Si   -0.00083    0.00267    0.14756
+ 28 Si    0.02584    0.02574   -0.02534
+ 29 Si   -0.00250   -0.00273    0.00569
+ 30 Si    0.00053    0.00211   -0.00108
+ 31 Si   -0.00091    0.00324   -0.00338
+ 32 Si   -0.02388    0.03425   -0.03416
+ 33 Si   -0.00385    0.00105   -0.00376
+ 34 Si   -0.00879    0.00046    0.00171
+ 35 Si   -0.00412   -0.00042   -0.00127
+ 36 Si    0.00226   -0.00037   -0.00005
+ 37 Si    0.00148   -0.00318   -0.00351
+ 38 Si    0.00169   -0.00123    0.00006
+ 39 Si   -0.00014   -0.00009    0.00379
+ 40 Si    0.00241   -0.00060    0.00303
+ 41 Si   -0.00036   -0.00192   -0.00101
+ 42 Si    0.00087    0.00016   -0.00134
+ 43 Si    0.00291   -0.00242   -0.00281
+ 44 Si    0.03473   -0.02436   -0.03454
+ 45 Si    0.00256   -0.00352   -0.00319
+ 46 Si    0.00083   -0.00755    0.00145
+ 47 Si   -0.00080   -0.00375   -0.00231
+ 48 Si    0.00272    0.00209   -0.00033
+ 49 Si   -0.00033   -0.00070   -0.00234
+ 50 Si    0.00186    0.00124   -0.00812
+ 51 Si   -0.00169   -0.00235   -0.00370
+ 52 Si   -0.00145   -0.00226   -0.00197
+ 53 Si    0.00081    0.00014   -0.00070
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+                                                      
+                                                      
+                                                      
+                                                      
+                                             Si       
+                                    Si                
+                                         Si           
+                            Si        Si              
+                                Si                    
+                              Si           Si         
+                     Si Si     Si SSi                 
+                          Si           Si             
+                       Si Si        Si                
+                 Si        Si  Si                     
+               Si           Si           Si           
+                   SSiSi      SiSSi                   
+           Si           Si           Si               
+                     Si  Si        Si                 
+                Si        Si Si                       
+             Si           Si                          
+                 SSi Si     Si Si                     
+         Si           Si                              
+                    Si                                
+              Si        Si                            
+           Si                                         
+                Si                                    
+       Si                                             
+                                                      
+                                                      
+                                                      
+                                                      
+
+Positions:
+   0 Si     0.000000    0.000000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Si     1.357500    1.357500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   2 Si     2.715000    2.715000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   3 Si     4.072500    4.072500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   4 Si     5.430000    5.430000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   5 Si     6.787500    6.787500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   6 Si     2.715000    0.000000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   7 Si     4.072500    1.357500    4.072500    ( 0.0000,  0.0000,  0.0000)
+   8 Si     5.430000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   9 Si     6.787500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  10 Si     8.145000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  11 Si     9.502500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  12 Si     5.430000    0.000000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  13 Si     6.787500    1.357500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  14 Si     8.145000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  15 Si     9.502500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  16 Si    10.860000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  17 Si    12.217500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  18 Si     0.000000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  19 Si     1.357500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  20 Si     2.715000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  21 Si     4.072500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  22 Si     5.430000    8.145000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  23 Si     6.787500    9.502500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  24 Si     2.715000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  25 Si     4.072500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  26 Si     5.430000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  27 Si     6.787500    6.787500    6.797500    ( 0.0000,  0.0000,  0.0000)
+  28 Si     8.145000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  29 Si     9.502500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  30 Si     5.430000    2.715000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  31 Si     6.787500    4.072500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  32 Si     8.145000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  33 Si     9.502500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  34 Si    10.860000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  35 Si    12.217500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  36 Si     0.000000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  37 Si     1.357500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  38 Si     2.715000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  39 Si     4.072500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  40 Si     5.430000   10.860000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  41 Si     6.787500   12.217500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  42 Si     2.715000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  43 Si     4.072500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  44 Si     5.430000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  45 Si     6.787500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  46 Si     8.145000   10.860000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  47 Si     9.502500   12.217500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  48 Si     5.430000    5.430000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  49 Si     6.787500    6.787500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  50 Si     8.145000    8.145000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  51 Si     9.502500    9.502500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  52 Si    10.860000   10.860000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  53 Si    12.217500   12.217500   12.217500    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    0.000000    8.145000    8.145000    52     0.1809
+  2. axis:    yes    8.145000    0.000000    8.145000    52     0.1809
+  3. axis:    yes    8.145000    8.145000    0.000000    52     0.1809
+
+  Lengths:  11.518769  11.518769  11.518769
+  Angles:   60.000000  60.000000  60.000000
+
+Effective grid spacing dv^(1/3) = 0.1973
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 15:32:48  -285.941779        c
+iter:   2 15:33:23  -285.941594        c -3.47
+iter:   3 15:33:59  -285.941216c       c -3.56
+iter:   4 15:34:34  -285.941166c       c -3.70
+iter:   5 15:35:09  -285.941161c       c -4.06c
+
+Converged after 5 iterations.
+
+Dipole moment: (-105.111728, -105.111757, -105.111307) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -425862.589512)
+
+Kinetic:       +382.958670
+Potential:     -333.205083
+External:        +0.000000
+XC:            -335.148529
+Entropy (-ST):   -0.021590
+Local:           -0.535425
+SIC:             +0.000000
+--------------------------
+Free energy:   -285.951956
+Extrapolated:  -285.941161
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0   106      5.30721    1.90679
+  0   107      5.30895    1.90523
+  0   108      6.09316    0.01567
+  0   109      6.09354    0.01561
+
+  1   106      5.06628    1.99125
+  1   107      5.06810    1.99109
+  1   108      6.34803    0.00123
+  1   109      6.34950    0.00122
+
+
+Fermi level: 5.60904
+
+Gap: 0.650 eV
+Transition (v -> c):
+  (s=0, k=0, n=107, [0.00, 0.00, 0.00]) -> (s=0, k=10, n=108, [0.33, 0.00, 0.33])
+Direct/indirect transitions are different
+Direct gap: 0.784 eV
+Transition at: (s=0, k=0, n=107, [0.00, 0.00, 0.00])
+
+Forces in eV/Ang:
+  0 Si    0.00037    0.00040    0.00161
+  1 Si    0.00063    0.00057    0.00207
+  2 Si    0.00128    0.00123    0.00525
+  3 Si    0.00017    0.00011    0.00902
+  4 Si    0.00039    0.00043    0.00360
+  5 Si   -0.00282   -0.00276    0.00044
+  6 Si    0.00040    0.00265    0.00054
+  7 Si   -0.00155    0.00923   -0.00010
+  8 Si   -0.00018    0.00236    0.00079
+  9 Si   -0.00737    0.00091    0.00109
+ 10 Si   -0.00026   -0.00085   -0.00034
+ 11 Si   -0.00290   -0.00246    0.00311
+ 12 Si   -0.00025    0.00305    0.00100
+ 13 Si   -0.00319    0.00143   -0.00140
+ 14 Si   -0.00087    0.00145   -0.00032
+ 15 Si   -0.00268    0.00271   -0.00407
+ 16 Si   -0.00175    0.00248    0.00240
+ 17 Si   -0.00270    0.00034    0.00133
+ 18 Si    0.00265    0.00037    0.00057
+ 19 Si    0.00926   -0.00157   -0.00007
+ 20 Si    0.00239   -0.00018    0.00082
+ 21 Si    0.00095   -0.00733    0.00115
+ 22 Si   -0.00086   -0.00025   -0.00036
+ 23 Si   -0.00250   -0.00294    0.00317
+ 24 Si    0.00151    0.00152    0.00240
+ 25 Si   -0.00227   -0.00225   -0.01372
+ 26 Si    0.02455    0.02467    0.03512
+ 27 Si    0.00053    0.00072   -0.15005
+ 28 Si   -0.02418   -0.02406    0.04523
+ 29 Si   -0.00009   -0.00007   -0.00377
+ 30 Si    0.00047    0.00088   -0.00166
+ 31 Si    0.00229   -0.00046    0.00071
+ 32 Si    0.02624   -0.01562    0.03646
+ 33 Si    0.00014   -0.00219    0.00036
+ 34 Si   -0.00813    0.00034    0.00026
+ 35 Si   -0.00117   -0.00274   -0.00054
+ 36 Si    0.00305   -0.00025    0.00096
+ 37 Si    0.00151   -0.00313   -0.00140
+ 38 Si    0.00153   -0.00086   -0.00028
+ 39 Si    0.00279   -0.00277   -0.00405
+ 40 Si    0.00247   -0.00184    0.00244
+ 41 Si    0.00027   -0.00277    0.00133
+ 42 Si    0.00098    0.00052   -0.00166
+ 43 Si   -0.00044    0.00236    0.00066
+ 44 Si   -0.01560    0.02622    0.03633
+ 45 Si   -0.00226    0.00012    0.00032
+ 46 Si    0.00029   -0.00823    0.00026
+ 47 Si   -0.00270   -0.00121   -0.00051
+ 48 Si    0.00381    0.00385   -0.00310
+ 49 Si   -0.00010   -0.00003   -0.00377
+ 50 Si   -0.00031   -0.00027   -0.01002
+ 51 Si    0.00021    0.00020   -0.00192
+ 52 Si   -0.00146   -0.00149   -0.00017
+ 53 Si   -0.00219   -0.00220    0.00000
+
+Writing to ./data/si_0.18_groundstate.gpw (mode='all')
+
+Timing:                                       incl.     excl.
+--------------------------------------------------------------------
+Basic WFS set positions:                      0.079     0.005   0.0% |
+ Redistribute:                                0.074     0.074   0.0% |
+Basis functions set positions:                0.623     0.623   0.0% |
+Forces:                                    1993.298     2.546   0.0% |
+ LCAO forces:                              1990.753     1.002   0.0% |
+  Atomic Hamiltonian force:                  52.046    52.046   0.8% |
+  Initial:                                    1.383     0.000   0.0% |
+   Get density matrix:                        1.383     1.383   0.0% |
+  Paw correction:                            42.709    42.709   0.7% |
+  Potential:                               1873.177  1873.177  29.2% |-----------|
+  TCI derivative:                            20.436    20.436   0.3% |
+  Wait for sum:                               0.000     0.000   0.0% |
+LCAO WFS Initialize:                        343.334     0.073   0.0% |
+ Density initialized from wave functions:   336.534     0.371   0.0% |
+  Calculate density matrix:                   0.467     0.467   0.0% |
+  Construct density:                        335.696   335.696   5.2% |-|
+  Symmetrize density:                         0.000     0.000   0.0% |
+ Hamiltonian:                                 6.727     0.000   0.0% |
+  Atomic:                                     4.593     0.013   0.0% |
+   XC Correction:                             4.580     4.580   0.1% |
+  Calculate atomic Hamiltonians:              0.192     0.192   0.0% |
+  Communicate:                                0.000     0.000   0.0% |
+  Hartree integrate/restrict:                 0.043     0.043   0.0% |
+  Initialize Hamiltonian:                     0.000     0.000   0.0% |
+  Poisson:                                    0.692     0.037   0.0% |
+   Communicate from 1D:                       0.081     0.081   0.0% |
+   Communicate from 2D:                       0.079     0.079   0.0% |
+   Communicate to 1D:                         0.061     0.061   0.0% |
+   Communicate to 2D:                         0.084     0.084   0.0% |
+   FFT 1D:                                    0.096     0.096   0.0% |
+   FFT 2D:                                    0.254     0.254   0.0% |
+  XC 3D grid:                                 1.189     1.189   0.0% |
+  vbar:                                       0.017     0.017   0.0% |
+P tci:                                       38.262    38.262   0.6% |
+Redistribute:                                 0.001     0.001   0.0% |
+SCF-cycle:                                 4015.247     0.287   0.0% |
+ Density:                                  3428.678     0.000   0.0% |
+  Atomic density matrices:                    0.490     0.490   0.0% |
+  Mix:                                        1.161     1.161   0.0% |
+  Multipole moments:                          0.012     0.012   0.0% |
+  Normalize:                                  0.003     0.003   0.0% |
+  Pseudo density:                          3427.012     0.037   0.0% |
+   Calculate density matrix:                  2.166     2.166   0.0% |
+   Construct density:                      3424.808  3424.808  53.4% |--------------------|
+   Symmetrize density:                        0.001     0.001   0.0% |
+ Hamiltonian:                                29.129     0.001   0.0% |
+  Atomic:                                    19.896     0.058   0.0% |
+   XC Correction:                            19.838    19.838   0.3% |
+  Calculate atomic Hamiltonians:              0.835     0.835   0.0% |
+  Communicate:                                0.000     0.000   0.0% |
+  Hartree integrate/restrict:                 0.194     0.194   0.0% |
+  Poisson:                                    3.021     0.141   0.0% |
+   Communicate from 1D:                       0.354     0.354   0.0% |
+   Communicate from 2D:                       0.360     0.360   0.0% |
+   Communicate to 1D:                         0.265     0.265   0.0% |
+   Communicate to 2D:                         0.367     0.367   0.0% |
+   FFT 1D:                                    0.417     0.417   0.0% |
+   FFT 2D:                                    1.119     1.119   0.0% |
+  XC 3D grid:                                 5.118     5.118   0.1% |
+  vbar:                                       0.064     0.064   0.0% |
+ LCAO eigensolver:                          557.153     0.373   0.0% |
+  Calculate projections:                      9.531     9.531   0.1% |
+  DenseAtomicCorrection:                     45.636    45.636   0.7% |
+  Distribute overlap matrix:                  0.566     0.566   0.0% |
+  Orbital Layouts:                          141.690   141.690   2.2% ||
+  Potential matrix:                         203.171   203.171   3.2% ||
+  Sum over cells:                           156.186   156.186   2.4% ||
+ST tci:                                       5.021     5.021   0.1% |
+Set symmetry:                                 0.001     0.001   0.0% |
+TCI: Evaluate splines:                        0.024     0.024   0.0% |
+mktci:                                        0.172     0.172   0.0% |
+Other:                                       12.973    12.973   0.2% |
+--------------------------------------------------------------------
+Total:                                               6409.036 100.0%
+
+Memory usage: 3.57 GiB
+Date: Wed Nov 19 15:37:43 2025
