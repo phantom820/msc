@@ -1,0 +1,394 @@
+
+  ___ ___ ___ _ _ _  
+ |   |   |_  | | | | 
+ | | | | | . | | | | 
+ |__ |  _|___|_____|  25.1.0
+ |___|_|             
+
+User:   tshepo@iPhone
+Date:   Fri Nov  7 10:09:11 2025
+Arch:   arm64
+Pid:    88139
+CWD:    /Users/tshepo/Documents/Workspace/msc/repositories/symmetry/production
+Python: 3.13.0
+gpaw:   /Users/tshepo/.asdf/installs/python/3.13.0/lib/python3.13/site-packages/gpaw
+_gpaw:  /Users/tshepo/.asdf/installs/python/3.13.0/lib/python3.13/site-packages/
+        _gpaw.cpython-313-darwin.so
+ase:    /Users/tshepo/.asdf/installs/python/3.13.0/lib/python3.13/site-packages/ase (version 3.25.0)
+numpy:  /Users/tshepo/.asdf/installs/python/3.13.0/lib/python3.13/site-packages/numpy (version 2.2.3)
+scipy:  /Users/tshepo/.asdf/installs/python/3.13.0/lib/python3.13/site-packages/scipy (version 1.15.2)
+libxc:  7.0.0
+units:  Angstrom and eV
+cores: 1
+OpenMP: False
+OMP_NUM_THREADS: 1
+
+Input parameters:
+  basis: dzp
+  convergence: {density: 1e-05}
+  h: 0.2
+  kpts: [2 2 2]
+  mode: lcao
+  symmetry: {point_group: True}
+  xc: PBE
+
+System changes: positions, numbers, cell, pbc, initial_charges, initial_magmoms 
+
+Initialize ...
+
+species:
+  Si:
+    name: Silicon
+    id: ee77bee481871cc2cb65ac61239ccafa
+    Z: 14.0
+    valence: 4
+    core: 10
+    charge: 0.0
+    file: /Users/tshepo/.gpaw/gpaw-setups-24.11.0/Si.PBE.gz
+    compensation charges: {type: gauss,
+                           rc: 0.33,
+                           lmax: 2}
+    cutoffs: {filter: 1.86,
+              core: 2.06}
+    projectors:
+      #              energy  rcut
+      - 3s(2.00)   -10.812   1.058
+      - 3p(2.00)    -4.081   1.058
+      -  s          16.399   1.058
+      -  p          23.130   1.058
+      -  d           0.000   1.058
+  
+    # LCAO basis set for Si:
+    #   Name: dzp
+    #   File: /Users/tshepo/.gpaw/gpaw-setups-24.11.0/Si.dzp.basis.gz
+    #   Number of radial functions: 5
+    #   Number of spherical harmonics: 13
+    #     l=0, rc=6.8594 Bohr: 3s-sz confined orbital
+    #     l=1, rc=9.0625 Bohr: 3p-sz confined orbital
+    #     l=0, rc=3.8906 Bohr: 3s-dz split-valence wave
+    #     l=1, rc=5.2344 Bohr: 3p-dz split-valence wave
+    #     l=2, rc=9.0625 Bohr: d-type Gaussian polarization
+    #   Number of RI-basis functions 0
+
+Reference energy: -425862.589512  # eV
+
+Spin-paired calculation
+
+Convergence criteria:
+ Maximum [total energy] change in last 3 cyles: 0.0005 eV / valence electron
+ Maximum integral of absolute [dens]ity change: 1e-05 electrons / valence electron
+ Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+ Maximum number of scf [iter]ations: 333
+ (Square brackets indicate name in SCF output, whereas a 'c' in
+ the SCF output indicates the quantity has converged.)
+
+Symmetries present (total): 24
+
+  ( 1  0  0)  ( 1  0  0)  ( 1  0 -1)  ( 1  0 -1)  ( 1 -1  0)  ( 1 -1  0)
+  ( 0  1  0)  ( 0  0  1)  ( 0  1 -1)  ( 0  0 -1)  ( 0 -1  1)  ( 0 -1  0)
+  ( 0  0  1)  ( 0  1  0)  ( 0  0 -1)  ( 0  1 -1)  ( 0 -1  0)  ( 0 -1  1)
+
+  ( 0  1  0)  ( 0  1  0)  ( 0  1 -1)  ( 0  1 -1)  ( 0  0  1)  ( 0  0  1)
+  ( 1  0  0)  ( 0  0  1)  ( 1  0 -1)  ( 0  0 -1)  ( 1  0  0)  ( 0  1  0)
+  ( 0  0  1)  ( 1  0  0)  ( 0  0 -1)  ( 1  0 -1)  ( 0  1  0)  ( 1  0  0)
+
+  ( 0  0 -1)  ( 0  0 -1)  ( 0 -1  1)  ( 0 -1  1)  ( 0 -1  0)  ( 0 -1  0)
+  ( 1  0 -1)  ( 0  1 -1)  ( 1 -1  0)  ( 0 -1  0)  ( 1 -1  0)  ( 0 -1  1)
+  ( 0  1 -1)  ( 1  0 -1)  ( 0 -1  0)  ( 1 -1  0)  ( 0 -1  1)  ( 1 -1  0)
+
+  (-1  1  0)  (-1  1  0)  (-1  0  1)  (-1  0  1)  (-1  0  0)  (-1  0  0)
+  (-1  0  1)  (-1  0  0)  (-1  1  0)  (-1  0  0)  (-1  1  0)  (-1  0  1)
+  (-1  0  0)  (-1  0  1)  (-1  0  0)  (-1  1  0)  (-1  0  1)  (-1  1  0)
+Note: your k-points are not as symmetric as your crystal!
+
+8 k-points: 2 x 2 x 2 Monkhorst-Pack grid
+2 k-points in the irreducible part of the Brillouin zone
+       k-points in crystal coordinates                weights
+   0:     0.25000000    0.25000000   -0.25000000          6/8
+   1:     0.25000000    0.25000000    0.25000000          2/8
+
+Wave functions: LCAO
+  Diagonalizer: Serial LAPACK
+  Atomic Correction: dense with blas
+  Data-type: complex
+ 
+
+Occupation numbers: Fermi-Dirac:
+  width: 0.1000  # eV
+ 
+
+Eigensolver
+   LCAO using direct dense diagonalizer 
+
+Densities:
+  Coarse grid: 48*48*48 grid
+  Fine grid: 96*96*96 grid
+  Total Charge: 0.000000 
+
+Density mixing:
+  Method: separate
+  Backend: pulay
+  Linear mixing parameter: 0.05
+  old densities: 5
+  Damping of long wavelength oscillations: 50 
+
+Hamiltonian:
+  XC and Coulomb potentials evaluated on a 96*96*96 grid
+  Using the PBE Exchange-Correlation functional
+  Interpolation: tri-quintic (5. degree polynomial)
+  Poisson solver: FastPoissonSolver using
+    Stencil: 12*3+1=37 point O(h^6) finite-difference Laplacian
+    FFT axes: [np.int64(0), np.int64(1), np.int64(2)]
+    FST axes: []
+ 
+
+XC parameters: PBE with 2 nearest neighbor stencil
+
+Memory estimate:
+  Process memory now: 220.84 MiB
+  Calculator: 386.88 MiB
+    Density: 152.50 MiB
+      Arrays: 21.94 MiB
+      Localized functions: 122.12 MiB
+      Mixer: 8.44 MiB
+    Hamiltonian: 23.42 MiB
+      Arrays: 14.34 MiB
+      XC: 0.00 MiB
+      Poisson: 0.00 MiB
+      vbar: 9.08 MiB
+    Wavefunctions: 210.96 MiB
+      C [qnM]: 2.87 MiB
+      S, T [2 x qmm]: 30.08 MiB
+      P [aqMi]: 0.94 MiB
+      BasisFunctions: 177.07 MiB
+      Eigensolver: 0.00 MiB
+
+Total number of cores used: 1
+
+Number of atoms: 54
+Number of atomic orbitals: 702
+Number of bands in calculation: 134
+Number of valence electrons: 216
+Bands to converge: occupied
+
+... initialized
+
+Initializing position-dependent things.
+
+Density initialized from atomic densities
+                                                      
+                                                      
+                                                      
+                                                      
+                                             Si       
+                                    Si                
+                                         Si           
+                            Si        Si              
+                                Si                    
+                              Si           Si         
+                     Si Si     Si SSi                 
+                          Si           Si             
+                       Si Si        Si                
+                 Si        Si  Si                     
+               Si           Si           Si           
+                   SSiSi      SiSSi                   
+           Si           Si           Si               
+                     Si  Si        Si                 
+                Si        Si Si                       
+             Si           Si                          
+                 SSi Si     Si Si                     
+         Si           Si                              
+                    Si                                
+              Si        Si                            
+           Si                                         
+                Si                                    
+       Si                                             
+                                                      
+                                                      
+                                                      
+                                                      
+
+Positions:
+   0 Si     0.000000    0.000000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Si     1.357500    1.357500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   2 Si     2.715000    2.715000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   3 Si     4.072500    4.072500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   4 Si     5.430000    5.430000    0.000000    ( 0.0000,  0.0000,  0.0000)
+   5 Si     6.787500    6.787500    1.357500    ( 0.0000,  0.0000,  0.0000)
+   6 Si     2.715000    0.000000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   7 Si     4.072500    1.357500    4.072500    ( 0.0000,  0.0000,  0.0000)
+   8 Si     5.430000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+   9 Si     6.787500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  10 Si     8.145000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  11 Si     9.502500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  12 Si     5.430000    0.000000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  13 Si     6.787500    1.357500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  14 Si     8.145000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  15 Si     9.502500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  16 Si    10.860000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  17 Si    12.217500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  18 Si     0.000000    2.715000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  19 Si     1.357500    4.072500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  20 Si     2.715000    5.430000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  21 Si     4.072500    6.787500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  22 Si     5.430000    8.145000    2.715000    ( 0.0000,  0.0000,  0.0000)
+  23 Si     6.787500    9.502500    4.072500    ( 0.0000,  0.0000,  0.0000)
+  24 Si     2.715000    2.715000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  25 Si     4.072500    4.072500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  26 Si     5.430000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  27 Si     6.787500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  28 Si     8.145000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  29 Si     9.502500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  30 Si     5.430000    2.715000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  31 Si     6.787500    4.072500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  32 Si     8.145000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  33 Si     9.502500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  34 Si    10.860000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  35 Si    12.217500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  36 Si     0.000000    5.430000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  37 Si     1.357500    6.787500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  38 Si     2.715000    8.145000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  39 Si     4.072500    9.502500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  40 Si     5.430000   10.860000    5.430000    ( 0.0000,  0.0000,  0.0000)
+  41 Si     6.787500   12.217500    6.787500    ( 0.0000,  0.0000,  0.0000)
+  42 Si     2.715000    5.430000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  43 Si     4.072500    6.787500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  44 Si     5.430000    8.145000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  45 Si     6.787500    9.502500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  46 Si     8.145000   10.860000    8.145000    ( 0.0000,  0.0000,  0.0000)
+  47 Si     9.502500   12.217500    9.502500    ( 0.0000,  0.0000,  0.0000)
+  48 Si     5.430000    5.430000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  49 Si     6.787500    6.787500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  50 Si     8.145000    8.145000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  51 Si     9.502500    9.502500   12.217500    ( 0.0000,  0.0000,  0.0000)
+  52 Si    10.860000   10.860000   10.860000    ( 0.0000,  0.0000,  0.0000)
+  53 Si    12.217500   12.217500   12.217500    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    0.000000    8.145000    8.145000    48     0.1959
+  2. axis:    yes    8.145000    0.000000    8.145000    48     0.1959
+  3. axis:    yes    8.145000    8.145000    0.000000    48     0.1959
+
+  Lengths:  11.518769  11.518769  11.518769
+  Angles:   60.000000  60.000000  60.000000
+
+Effective grid spacing dv^(1/3) = 0.2138
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 10:09:16  -285.773720        c
+iter:   2 10:09:23  -285.763550        c -0.84
+iter:   3 10:09:29  -285.901473        c -0.86
+iter:   4 10:09:35  -285.853036        c -1.90
+iter:   5 10:09:42  -285.850233c       c -2.25
+iter:   6 10:09:48  -285.850233c       c -3.65
+iter:   7 10:09:55  -285.850246c       c -3.65
+iter:   8 10:10:01  -285.850244c       c -4.64
+iter:   9 10:10:08  -285.850245c       c -4.84
+iter:  10 10:10:14  -285.850245c       c -8.11c
+
+Converged after 10 iterations.
+
+Dipole moment: (-107.186508, -107.186508, -107.186508) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -425862.589512)
+
+Kinetic:       +382.714105
+Potential:     -333.051729
+External:        +0.000000
+XC:            -335.084339
+Entropy (-ST):   -0.013784
+Local:           -0.421390
+SIC:             +0.000000
+--------------------------
+Free energy:   -285.857137
+Extrapolated:  -285.850245
+
+Showing all kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0   106      4.69945    1.99982
+  0   107      4.95020    1.99782
+  0   108      6.15607    0.01054
+  0   109      6.74160    0.00003
+
+  1   106      5.16194    1.98199
+  1   107      5.16194    1.98199
+  1   108      6.26351    0.00361
+  1   109      6.26351    0.00361
+
+
+Fermi level: 5.63205
+
+Gap: 0.994 eV
+Transition (v -> c):
+  (s=0, k=1, n=107, [0.25, 0.25, 0.25]) -> (s=0, k=0, n=108, [0.25, 0.25, -0.25])
+Direct/indirect transitions are different
+Direct gap: 1.102 eV
+Transition at: (s=0, k=1, n=107, [0.25, 0.25, 0.25])
+Writing to ./data/meta/si_supercell.gpw (mode='')
+
+Timing:                              incl.     excl.
+-----------------------------------------------------------
+Basic WFS set positions:             0.006     0.006   0.0% |
+Basis functions set positions:       0.092     0.092   0.1% |
+LCAO WFS Initialize:                 0.570     0.065   0.1% |
+ Hamiltonian:                        0.505     0.000   0.0% |
+  Atomic:                            0.380     0.001   0.0% |
+   XC Correction:                    0.379     0.379   0.6% |
+  Calculate atomic Hamiltonians:     0.011     0.011   0.0% |
+  Communicate:                       0.000     0.000   0.0% |
+  Hartree integrate/restrict:        0.003     0.003   0.0% |
+  Initialize Hamiltonian:            0.000     0.000   0.0% |
+  Poisson:                           0.038     0.003   0.0% |
+   Communicate from 1D:              0.005     0.005   0.0% |
+   Communicate from 2D:              0.004     0.004   0.0% |
+   Communicate to 1D:                0.004     0.004   0.0% |
+   Communicate to 2D:                0.005     0.005   0.0% |
+   FFT 1D:                           0.003     0.003   0.0% |
+   FFT 2D:                           0.016     0.016   0.0% |
+  XC 3D grid:                        0.070     0.070   0.1% |
+  vbar:                              0.002     0.002   0.0% |
+P tci:                               0.431     0.431   0.7% |
+SCF-cycle:                          61.216     0.030   0.0% |
+ Density:                           28.444     0.000   0.0% |
+  Atomic density matrices:           0.063     0.063   0.1% |
+  Mix:                               0.152     0.152   0.2% |
+  Multipole moments:                 0.002     0.002   0.0% |
+  Normalize:                         0.000     0.000   0.0% |
+  Pseudo density:                   28.228     0.003   0.0% |
+   Calculate density matrix:         0.051     0.051   0.1% |
+   Construct density:               28.102    28.102  44.4% |-----------------|
+   Symmetrize density:               0.071     0.071   0.1% |
+ Hamiltonian:                        4.305     0.000   0.0% |
+  Atomic:                            3.237     0.009   0.0% |
+   XC Correction:                    3.228     3.228   5.1% |-|
+  Calculate atomic Hamiltonians:     0.099     0.099   0.2% |
+  Communicate:                       0.000     0.000   0.0% |
+  Hartree integrate/restrict:        0.023     0.023   0.0% |
+  Poisson:                           0.318     0.015   0.0% |
+   Communicate from 1D:              0.041     0.041   0.1% |
+   Communicate from 2D:              0.035     0.035   0.1% |
+   Communicate to 1D:                0.032     0.032   0.0% |
+   Communicate to 2D:                0.040     0.040   0.1% |
+   FFT 1D:                           0.024     0.024   0.0% |
+   FFT 2D:                           0.131     0.131   0.2% |
+  XC 3D grid:                        0.621     0.621   1.0% |
+  vbar:                              0.007     0.007   0.0% |
+ LCAO eigensolver:                  28.437     0.009   0.0% |
+  Calculate projections:             0.190     0.190   0.3% |
+  DenseAtomicCorrection:             1.084     1.084   1.7% ||
+  Distribute overlap matrix:         0.013     0.013   0.0% |
+  Orbital Layouts:                   2.918     2.918   4.6% |-|
+  Potential matrix:                 22.934    22.934  36.2% |-------------|
+  Sum over cells:                    1.289     1.289   2.0% ||
+ST tci:                              0.215     0.215   0.3% |
+Set symmetry:                        0.002     0.002   0.0% |
+TCI: Evaluate splines:               0.012     0.012   0.0% |
+mktci:                               0.012     0.012   0.0% |
+Other:                               0.745     0.745   1.2% |
+-----------------------------------------------------------
+Total:                                        63.301 100.0%
+
+Memory usage: 1.52 GiB
+Date: Fri Nov  7 10:10:14 2025
